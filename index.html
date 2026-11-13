@@ -1,0 +1,555 @@
+<!DOCTYPE html><html lang="pt-BR" data-theme="dark"><head><meta charset="utf-8"><meta name="theme-color" content="#0B1220"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Estuda+</title>
+<style>
+:root{--b:#2563EB;--bd:#0B1220;--bl:#1E3A8A;--bt:#DBEAFE;--p:#3B82F6;--g:#10B981;--bg:#0B1220;--c:#162033;--t:#F1F5F9;--t2:#94A3B8;--ln:#26344D;--H:34px;color-scheme:dark}
+:root[data-theme=light]{--bd:#0F172A;--bl:#DBEAFE;--bt:#1E3A8A;--p:#1E3A8A;--bg:#F8FAFC;--c:#fff;--t:#1E293B;--t2:#64748B;--ln:#E2E8F0;color-scheme:light}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px);padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--t);font:16px/1.5 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+[hidden]{display:none!important}
+button,input,select,textarea{font:inherit;color:inherit}button{touch-action:manipulation}
+h1{font-size:1.65rem;line-height:1.2;margin:.2em 0 .3em;letter-spacing:-.01em}h2{letter-spacing:-.01em}
+h3{margin:.2em 0 .7em;font-size:1.05rem;display:flex;align-items:center;gap:8px;flex-wrap:wrap}h3 small{margin-left:2px}
+p{margin:.5em 0}.m{color:var(--t2)}small{color:var(--t2);font-weight:400}
+.ic{display:inline-block;width:1.2em;height:1.2em;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none;vertical-align:-.22em;margin-right:.4em}
+.ic.f{fill:currentColor}h3 .ic,.btn .ic,.ln .ic,.chp .ic{margin-right:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;background:var(--b);color:#fff;border:0;border-radius:12px;padding:10px 18px;min-height:44px;font-weight:600;cursor:pointer;transition:.2s;text-decoration:none;margin:2px 2px 2px 0}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px #2563eb55}
+.btn.s{background:var(--bl);color:var(--bt)}.btn.o{background:none;border:1px solid var(--ln);color:var(--t)}.btn.p{background:var(--p)}
+.btn.sm{padding:6px 12px;min-height:38px;font-size:14px}
+.card{background:var(--c);border:1px solid var(--ln);border-radius:16px;padding:18px;box-shadow:0 2px 10px #00000026;margin-bottom:16px;animation:in .3s}
+:root[data-theme=light] .card{box-shadow:0 2px 12px #0f172a14}
+@keyframes in{from{opacity:0;transform:translateY(6px)}}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(210px,100%),1fr))}.grid .card{margin:0}
+.big{font-size:1.8rem;font-weight:700;display:flex;align-items:center;gap:8px;line-height:1.3}.big .ic{width:.85em;height:.85em;margin:0}
+input,select,textarea{display:block;width:100%;max-width:100%;min-width:0;padding:10px 12px;border:1px solid var(--ln);border-radius:10px;background:var(--bg);min-height:44px}
+input[type=date],input[type=time]{-webkit-appearance:none;appearance:none;line-height:1.2;text-align:left}
+textarea{resize:vertical}input:focus,select:focus,textarea:focus{outline:2px solid var(--b);outline-offset:1px}
+label.f{display:block;font-size:14px;color:var(--t2);margin-bottom:10px}label.f input,label.f select,label.f textarea{margin-top:4px;color:var(--t)}
+.rw{display:flex;gap:8px;margin:6px 0;align-items:center}.rw input{flex:1}.fg{display:grid;gap:0 14px;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr))}
+.bd{display:inline-flex;align-items:center;gap:3px;font-size:12px;font-weight:700;padding:2px 9px;border-radius:99px;margin-left:4px;white-space:nowrap}.bd .ic{width:.95em;height:.95em;margin:0}
+.bd.r{background:#EF444430;color:#FCA5A5}.bd.y{background:#F59E0B30;color:#FCD34D}.bd.b{background:#3B82F630;color:#93C5FD}.bd.g{background:#10B98130;color:#6EE7B7}
+:root[data-theme=light] .bd.r{background:#FEE2E2;color:#991B1B}:root[data-theme=light] .bd.y{background:#FEF3C7;color:#92400E}:root[data-theme=light] .bd.b{background:#DBEAFE;color:#1E3A8A}:root[data-theme=light] .bd.g{background:#DCFCE7;color:#166534}
+.it{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--ln);flex-wrap:wrap}.it:last-child{border:0}.it .g{flex:1 1 160px;min-width:0;overflow-wrap:anywhere}.it small{display:block}
+.it.dn b{text-decoration:line-through;color:var(--t2)}.it.br{color:var(--t2);font-size:14px;padding:6px 0}
+.ck{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--t2);cursor:pointer;min-height:44px}.ck input{width:22px;height:22px;min-height:0;padding:0;accent-color:#16A34A}
+.ln{display:inline-flex;align-items:center;gap:5px;background:none;border:0;color:var(--b);text-decoration:underline;cursor:pointer;min-height:44px;padding:0 6px}
+:root:not([data-theme=light]) .ln{color:#60A5FA}
+.pb{height:12px;background:var(--ln);border-radius:9px;overflow:hidden}.pb i{display:block;height:100%;transition:width .6s;border-radius:9px}
+.nt{background:#F59E0B26;color:#FCD34D;border-radius:12px;padding:10px 14px;margin:12px 0;font-size:14px}:root[data-theme=light] .nt{background:#FEF3C7;color:#92400E}
+.ov{position:fixed;inset:0;background:#020617b3;display:flex;align-items:center;justify-content:center;padding:20px;z-index:9}.ov .card{max-width:420px}
+#ts{position:fixed;left:50%;bottom:96px;transform:translate(-50%,20px);background:var(--bl);color:#fff;border:1px solid var(--b);padding:12px 18px;border-radius:12px;opacity:0;transition:.3s;z-index:10;pointer-events:none;max-width:90%;text-align:center}#ts.on{opacity:1;transform:translate(-50%,0)}
+nav.sb{position:fixed;bottom:0;left:0;right:0;background:var(--c);display:flex;overflow-x:auto;border-top:1px solid var(--ln);padding-bottom:env(safe-area-inset-bottom,0px);z-index:5;scrollbar-width:none}nav.sb::-webkit-scrollbar{display:none}nav.sb .logo{display:none}
+nav.sb button{flex:1 1 0;min-width:0;min-height:58px;background:none;border:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;cursor:pointer;color:var(--t2)}nav.sb .ic{width:22px;height:22px;margin:0}nav.sb em{font-style:normal;font-size:11px}nav.sb button.on{color:#60A5FA;font-weight:700}:root[data-theme=light] nav.sb button.on{color:var(--b)}
+main{padding:20px 16px 110px;max-width:980px;margin:auto}
+@media(min-width:800px){nav.sb{top:0;right:auto;width:230px;flex-direction:column;border:0;border-right:1px solid var(--ln);padding:20px 12px;overflow:auto}nav.sb .logo{display:block;margin:0 0 18px 8px}nav.sb button{flex:0 0 auto;flex-direction:row;justify-content:flex-start;gap:12px;width:100%;min-height:48px;border-radius:12px;padding:0 14px}nav.sb em{font-size:15px}nav.sb button.on{background:var(--bl);color:var(--bt)}main{margin-left:230px;max-width:none;padding:32px 40px}#ts{bottom:30px}}
+.logo{font-weight:800;font-size:1.4rem;color:var(--t)}.logo span{color:var(--b)}
+.top{display:flex;align-items:center;justify-content:space-between;padding:14px 5%;position:sticky;top:0;background:var(--bg);z-index:4;gap:10px}.top nav{display:none;gap:22px;align-items:center}.top nav a{color:var(--t2);text-decoration:none}
+@media(min-width:760px){.top nav{display:flex}}
+.hero{display:grid;gap:30px;padding:30px 5%;grid-template-columns:repeat(auto-fit,minmax(min(290px,100%),1fr));align-items:center}.hero h1{font-size:2.2rem}
+.mock{background:linear-gradient(135deg,var(--bd),var(--b));padding:18px;border-radius:26px;box-shadow:0 20px 40px #2563eb44;max-width:360px;margin:auto;width:100%;border:1px solid var(--ln)}.mock div{background:var(--c);border-radius:12px;padding:10px 12px;margin:8px 0;font-size:14px}.mock b{display:block;color:#fff;margin-bottom:4px}
+.mock .mk{display:flex;gap:10px;background:none;padding:0;margin:0 0 6px;color:#fff}.mock .mk .ic{width:30px;height:30px;margin:0}
+.sec{padding:20px 5%}.sec h2{margin:.2em 0}.vs{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr))}.vs .card{margin:0}
+.fi{width:48px;height:48px;border-radius:14px;background:var(--bl);color:var(--bt);display:flex;align-items:center;justify-content:center;margin-bottom:10px}.fi .ic{width:26px;height:26px;margin:0}
+.clk{font-size:4rem;font-weight:800;text-align:center;margin:16px 0}.c{text-align:center}
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}.cal>div{background:var(--c);border:1px solid var(--ln);border-radius:8px;min-height:62px;min-width:0;padding:3px;font-size:11px;overflow:hidden}.cal .h{min-height:0;background:none;border:0;text-align:center;color:var(--t2)}
+.ch{display:block;font-size:10px;color:#fff;border-radius:4px;padding:1px 4px;margin-top:2px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.lg span{display:inline-block;margin-right:12px;font-size:13px}.lg i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:4px}
+details{padding:8px 0;border-bottom:1px solid var(--ln)}summary{cursor:pointer;font-weight:600}
+.er{color:#B91C1C;font-size:14px;margin:6px 0}:root:not([data-theme=light]) .er{color:#FCA5A5}
+.sg{height:90px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;background:linear-gradient(135deg,var(--bd),var(--b));color:#fff}.sg .ic{width:42px;height:42px;margin:0}
+.chp{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:99px;background:var(--bl);color:var(--bt);margin:3px;border:0;cursor:pointer;min-height:40px}
+.st{background:none;border:0;color:var(--t2);cursor:pointer;min-width:44px;min-height:44px;padding:0;display:inline-flex;align-items:center;justify-content:center}.st .ic{width:32px;height:32px;margin:0}.st.on{color:#F59E0B}.st:focus-visible{outline:2px solid var(--b);border-radius:8px}
+.sv{color:#F59E0B;white-space:nowrap}.sv .ic{width:16px;height:16px;margin:0 1px 0 0}.sv .ic:not(.f){color:var(--t2)}
+.tabs{display:flex;gap:6px;margin:10px 0 16px}.tabs button{flex:1 1 0;min-width:0;min-height:46px;border:1px solid var(--ln);background:var(--c);color:var(--t2);border-radius:12px;cursor:pointer;font-weight:600;display:flex;align-items:center;justify-content:center;gap:7px;padding:0 10px;font-size:14px}.tabs button .ic{margin:0}.tabs button.on{background:var(--b);border-color:var(--b);color:#fff}
+.dys{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 8px}.dy{position:relative;display:block}
+.dy input{position:absolute;inset:0;opacity:0;width:100%;height:100%;min-height:0;margin:0;padding:0;cursor:pointer}
+.dy span{display:flex;align-items:center;justify-content:center;min-width:46px;min-height:44px;padding:0 10px;border:1px solid var(--ln);border-radius:12px;background:var(--bg);color:var(--t2);font-weight:600;font-size:14px}
+.dy input:checked+span{background:var(--b);border-color:var(--b);color:#fff}.dy input:focus-visible+span{outline:2px solid var(--bt);outline-offset:2px}
+.wi{width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;flex:none}.wi .ic{width:20px;height:20px;margin:0}
+.wk{display:grid;grid-template-columns:26px repeat(7,minmax(0,1fr));gap:2px}
+.wh{height:42px;text-align:center;font-size:11px;color:var(--t2);line-height:1.2;display:flex;flex-direction:column;justify-content:center;align-items:center}.wh b{font-size:13px;color:var(--t);min-width:22px;line-height:22px;border-radius:99px}.wh.tdy b{background:var(--b);color:#fff}
+.wb{position:relative;border-radius:6px;background-color:var(--bg);background-image:repeating-linear-gradient(to bottom,var(--ln) 0 1px,transparent 1px var(--H));overflow:hidden}
+.wg .wb{background:none;overflow:visible}.wg i{position:absolute;right:2px;font-style:normal;font-size:10px;color:var(--t2);transform:translateY(-6px)}
+.we{position:absolute;border:0;border-radius:6px;color:#fff;font-size:10px;line-height:1.15;padding:2px 3px;overflow:hidden;text-align:left;cursor:pointer;display:block;box-shadow:0 0 0 1px var(--bg)}.we span{display:block;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.we small{color:#ffffffcc;font-size:9px}
+.tv{position:absolute;border-radius:4px;opacity:.45;background-image:repeating-linear-gradient(45deg,var(--tc) 0 3px,transparent 3px 6px)}
+@media(max-width:480px){main{padding:16px 12px 110px}.card{padding:14px}h1{font-size:1.5rem}.clk{font-size:3.2rem}.tabs button{font-size:13px;padding:0 6px}}
+.hero2{background:linear-gradient(135deg,#1E3A8A 0%,#2563EB 55%,#7C3AED 120%);color:#fff;border-radius:20px;padding:18px;margin-bottom:16px;box-shadow:0 10px 28px #2563eb40;animation:in .4s;position:relative;overflow:hidden}
+.hero2:after{content:"";position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:#ffffff14}
+.hero2 small{color:#ffffffcc}.hero2 .pb{background:#ffffff33;height:14px}.hero2 .flm{color:#FDBA74}
+.h2t{display:flex;gap:14px;align-items:center;position:relative;z-index:1}
+.h2i{flex:1;min-width:0}.h2i b{display:block;font-size:1.15rem}.h2i>span{opacity:.85;font-size:14px}.xpb{margin:8px 0 4px}
+.lvb{flex:none;width:68px;height:68px;border-radius:50%;background:linear-gradient(145deg,#FDE68A,#F59E0B);color:#78350F;font-weight:800;font-size:1.7rem;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;box-shadow:0 0 0 4px #ffffff40,0 6px 16px #0004}
+.lvb small{font-size:9px;color:#78350F;letter-spacing:.08em;margin-top:2px}
+.lvb.big2{width:96px;height:96px;font-size:2.6rem;margin:6px auto 12px;animation:pop .6s}
+.chips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:14px;position:relative;z-index:1}
+.gc{background:#ffffff1f;border-radius:14px;padding:8px 6px;text-align:center;display:flex;flex-direction:column;align-items:center;line-height:1.25}
+.gc b{font-size:1.25rem}.gc small{font-size:11px}.gc .ic{width:22px;height:22px;margin:0}
+.flm{display:inline-flex;color:#FB923C}.flm.off{color:var(--t2);opacity:.6}
+.flm:not(.off) .ic{animation:fl 1.6s ease-in-out infinite;transform-origin:50% 90%}
+@keyframes fl{50%{transform:scale(1.12) rotate(-4deg)}}
+.stk{display:flex;gap:14px;align-items:center;margin-bottom:12px}.big3 .ic{width:52px;height:52px;margin:0}
+.sdw{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:8px}
+.sd{text-align:center;font-size:11px;color:var(--t2)}
+.sd b{display:flex;margin:4px auto 0;width:32px;height:32px;border-radius:50%;background:var(--bg);border:2px solid var(--ln);align-items:center;justify-content:center;color:#fff}
+.sd b .ic{width:16px;height:16px;margin:0}.sd.on b{background:#F97316;border-color:#F97316;animation:pop .4s}.sd.td b{outline:2px solid var(--b);outline-offset:2px}
+.ms{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--ln);flex-wrap:wrap}
+.ms .g{flex:1 1 150px;min-width:0}.ms .pb{height:9px;margin:6px 0 3px}.ms.dn b{color:var(--t2)}
+.mi{width:42px;height:42px;border-radius:14px;background:var(--bl);color:var(--bt);display:flex;align-items:center;justify-content:center;flex:none}.mi .ic{width:22px;height:22px;margin:0}
+.btn.gl{background:linear-gradient(135deg,#F59E0B,#F97316);animation:pulse 1.6s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 6px #f59e0b30}}
+.agr{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:10px}
+.ab{text-align:center;padding:10px 6px;border-radius:14px;border:1px solid var(--ln);background:var(--bg);display:flex;flex-direction:column;align-items:center;gap:4px;opacity:.65}
+.ab b{font-size:12px;line-height:1.2}.ab small{font-size:10.5px;line-height:1.2}.ab.on{opacity:1;border-color:var(--mc)}
+.medal{width:72px;height:72px;border-radius:50%;margin:8px auto 12px;display:flex;align-items:center;justify-content:center;color:#fff;background:var(--mc,#64748B);box-shadow:0 0 0 5px #ffffff22;animation:pop .6s}
+.medal .ic{width:34px;height:34px;margin:0}.medal.sm{width:46px;height:46px;margin:0;animation:none;box-shadow:none}.medal.sm .ic{width:22px;height:22px}
+.ab:not(.on) .medal{background:var(--ln);color:var(--t2)}
+.pop{animation:pop .45s}@keyframes pop{0%{transform:scale(.6);opacity:0}70%{transform:scale(1.08)}100%{transform:scale(1);opacity:1}}
+.ov .card.pop{position:relative;overflow:hidden}
+.cf{position:absolute;inset:0;overflow:hidden;pointer-events:none}.cf i{position:absolute;top:-14px;width:8px;height:12px;border-radius:2px;animation:fall 1.8s ease-in forwards}
+@keyframes fall{to{transform:translateY(420px) rotate(540deg);opacity:0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.hn{display:block;margin-top:4px;font-size:12.5px;line-height:1.35}
+.hero2.mini{padding:12px 14px;cursor:pointer}.hero2.mini .lvb{width:54px;height:54px;font-size:1.35rem}.hero2.mini .lvb small{font-size:8px}
+.hero2.mini .gc{flex:none;min-width:56px;padding:6px 8px}.hero2.mini .h2i b{font-size:1rem}.hero2.mini .xpb{margin:5px 0 3px}.hero2.mini .pb{height:10px}
+.mr{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:var(--c);border:1px solid var(--ln);border-radius:14px;padding:12px;margin-bottom:8px;cursor:pointer;min-height:64px;color:var(--t)}
+.mr .g{flex:1;min-width:0}.mr b{display:block}.mr>.ic{color:var(--t2);margin:0}.mr:hover{border-color:var(--b)}.bk{margin-bottom:4px}
+summary .ic{margin-right:.5em}
+#tour{position:fixed;inset:0;z-index:30;pointer-events:none}#tour:empty{display:none}
+#tour .tb{position:absolute;inset:0;pointer-events:auto}
+#tour .tr{position:fixed;border:3px solid #FBBF24;border-radius:14px;box-shadow:0 0 0 9999px #020617c4;transition:left .3s,top .3s,width .3s,height .3s;pointer-events:none}
+#tour .tr.n{border-color:transparent;border-radius:0}
+.tt{position:fixed;background:var(--c);color:var(--t);border:1px solid var(--ln);border-radius:16px;padding:14px 16px;box-shadow:0 12px 40px #0009;pointer-events:auto;animation:pop .3s}
+.tt small{color:var(--t2);font-size:12px}.tt b{display:block;font-size:1.05rem;margin:2px 0 4px}.tt p{margin:0 0 10px;font-size:14.5px}
+.tt:after{content:"";position:absolute;width:14px;height:14px;background:var(--c);border:1px solid var(--ln);transform:rotate(45deg)}
+.tt.c:after{display:none}
+.tt.t:after{bottom:-8px;left:calc(var(--ax) - 7px);border-top:0;border-left:0;animation:ndy 1s ease-in-out infinite}
+.tt.b:after{top:-8px;left:calc(var(--ax) - 7px);border-bottom:0;border-right:0;animation:ndu 1s ease-in-out infinite}
+.tt.r:after{left:-8px;top:calc(var(--ay) - 7px);border-top:0;border-right:0;animation:ndl 1s ease-in-out infinite}
+@keyframes ndy{50%{translate:0 4px}}@keyframes ndu{50%{translate:0 -4px}}@keyframes ndl{50%{translate:-4px 0}}
+.tpb{height:5px;background:var(--ln);border-radius:9px;overflow:hidden;margin-bottom:10px}.tpb i{display:block;height:100%;background:var(--b);transition:width .3s}
+.tbt{display:flex;gap:8px;align-items:center}.sp{flex:1}.tsk{display:block;margin:2px auto 0;min-height:40px;font-size:14px}
+</style></head><body><div id="app"></div><div id="md"></div><div id="tour"></div><div id="ts" role="status"></div>
+<script>
+const K='estuda_v1',D=864e5;let S=null,UID=null,IN=false,A=0;
+try{const cu=localStorage.getItem('estuda_cu');if(cu){UID=cu;S=JSON.parse(localStorage.getItem('estuda_u_'+cu));IN=!!S}else if(localStorage.getItem('estuda_in')=='1'){S=JSON.parse(localStorage.getItem('estuda_demo'));IN=!!S}}catch(e){}
+if(S&&!S.wk)S.wk=[];
+
+let GQ=[];const save=()=>{if(!S)return;try{gamChk()}catch(e){}S._t=Date.now();try{localStorage.setItem(UID?'estuda_u_'+UID:S.demo?'estuda_demo':K,JSON.stringify(S))}catch(e){}if(UID)qsync()};
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const $=s=>document.querySelector(s),V0=s=>($(s)||{}).value;
+const P={'house':`<path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>`,'calendar':`<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/>`,'calendar-check':`<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/>`,'calendar-days':`<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/>`,'clipboard-list':`<rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/>`,'book-open':`<path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>`,'book-open-text':`<path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>`,'chart-column':`<path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/>`,'target':`<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>`,'timer':`<line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/>`,'bot':`<path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/>`,'star':`<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/>`,'settings':`<path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/>`,'hourglass':`<path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/>`,'circle-check':`<circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>`,'brain':`<path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M12 18v-5"/>`,'bell':`<path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/>`,'coffee':`<path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/><path d="M6 2v2"/>`,'refresh-cw':`<path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/>`,'lightbulb':`<path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/>`,'calculator':`<rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/>`,'languages':`<path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/>`,'landmark':`<line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/>`,'flask-conical':`<path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/>`,'globe':`<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>`,'dumbbell':`<path d="M14.4 14.4 9.6 9.6"/><path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"/><path d="m21.5 21.5-1.4-1.4"/><path d="M3.9 3.9 2.5 2.5"/><path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"/>`,'palette':`<path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"/><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/>`,'book':`<path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/>`,'flame':`<path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>`,'trophy':`<path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>`,'square-check-big':`<path d="M21 10.5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12.5"/><path d="m9 11 3 3L22 4"/>`,'square':`<rect width="18" height="18" x="3" y="3" rx="2"/>`,'party-popper':`<path d="M5.8 11.3 2 22l10.7-3.79"/><path d="M4 3h.01"/><path d="M22 8h.01"/><path d="M15 2h.01"/><path d="M22 20h.01"/><path d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10"/><path d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11c-.11.7-.72 1.22-1.43 1.22H17"/><path d="m11 2 .33.82c.34.86-.2 1.82-1.11 1.98C9.52 4.9 9 5.52 9 6.23V7"/><path d="M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z"/>`,'chevrons-up':`<path d="m17 11-5-5-5 5"/><path d="m17 18-5-5-5 5"/>`,'chevron-up':`<path d="m18 15-6-6-6 6"/>`,'minus':`<path d="M5 12h14"/>`,'chevron-down':`<path d="m6 9 6 6 6-6"/>`,'triangle-alert':`<path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/>`,'clock':`<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>`,'graduation-cap':`<path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/>`,'pencil':`<path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/>`,'arrow-left':`<path d="m12 19-7-7 7-7"/><path d="M19 12H5"/>`,'x':`<path d="M18 6 6 18"/><path d="m6 6 12 12"/>`,'chevron-left':`<path d="m15 18-6-6 6-6"/>`,'chevron-right':`<path d="m9 18 6-6-6-6"/>`,'moon':`<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>`,'lock':`<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>`,'message-square':`<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>`,'plus':`<path d="M5 12h14"/><path d="M12 5v14"/>`,'trash-2':`<path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/>`,'car':`<path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/>`,'school':`<path d="m4 6 8-4 8 4"/><path d="m18 10 4 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8l4-2"/><path d="M14 22v-4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v4"/><path d="M18 5v17"/><path d="M6 5v17"/><circle cx="12" cy="9" r="2"/>`,'briefcase':`<path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/>`,'user':`<path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>`,'shapes':`<path d="M8.3 10a.7.7 0 0 1-.626-1.079L11.4 3a.7.7 0 0 1 1.198-.043L16.3 8.9a.7.7 0 0 1-.572 1.1Z"/><rect x="3" y="14" width="7" height="7" rx="1"/><circle cx="17.5" cy="17.5" r="3.5"/>`,'list-checks':`<path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/>`,'check':`<path d="M20 6 9 17l-5-5"/>`,'zap':`<path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>`,'medal':`<path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"/><path d="M11 12 5.12 2.2"/><path d="m13 12 5.88-9.8"/><path d="M8 7h8"/><circle cx="12" cy="17" r="5"/>`,'gift':`<rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/>`,'rocket':`<path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>`,'crown':`<path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"/><path d="M5 21h14"/>`,'menu':`<path d="M4 12h16"/><path d="M4 6h16"/><path d="M4 18h16"/>`,'circle-help':`<circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/>`,'circle':`<circle cx="12" cy="12" r="9"/>`};
+const ico=(n,c)=>`<svg class="ic${c?' '+c:''}" viewBox="0 0 24 24" aria-hidden="true">${P[n]||P.circle}</svg>`,rIc=()=>{};
+const iso=x=>x.getFullYear()+'-'+String(x.getMonth()+1).padStart(2,'0')+'-'+String(x.getDate()).padStart(2,'0');
+const today=()=>iso(new Date()),wd=s=>new Date(s+'T12:00');
+const add=(s,n)=>{const d=wd(s);d.setDate(d.getDate()+n);return iso(d)};
+const diff=s=>Math.round((wd(s)-wd(today()))/D);
+const hm=m=>String(m/60|0).padStart(2,'0')+':'+String(m%60).padStart(2,'0');
+const tm=s=>{const[a,b]=s.split(':');return +a*60+ +b};
+const fmt=m=>m>=60?(m/60|0)+'h'+(m%60?String(m%60).padStart(2,'0'):''):m+'min';
+const ddm=s=>{const d=wd(s);return String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0')};
+const DN=['Domingo','Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado'];
+const TP={Prova:'#DC2626',Trabalho:'#7C3AED',Tarefa:'#2563EB',Seminário:'#B45309',Projeto:'#0D9488',Revisão:'#15803D',Sessão:'#64748B',Apresentação:'#B45309',Aula:'#0E7490',Estudo:'#15803D',Reunião:'#9333EA',Outros:'#475569'};
+const DF=['','Fácil','Médio','Difícil'];
+let V='home',CM='mes',CO=0,T={sel:25,tot:1500,left:1500,on:0,el:0},TI=null;
+function toast(m){const t=$('#ts');t.textContent=m;t.className='on';setTimeout(()=>t.className='',2800)}
+const bar=(p,c)=>`<div class="pb" role="progressbar" aria-valuenow="${p}" aria-valuemin="0" aria-valuemax="100"><i style="width:${Math.min(100,p)}%;background:${c||'var(--b)'}"></i></div>`;
+/* --- priorização --- */
+function score(a){const d=diff(a.due),s=S.sub.find(x=>x.n==a.m),df=s?s.d:2;
+const u=d<0?50:d<=1?45:d<=3?32:d<=7?20:8;return{v:u+df*7+Math.min(a.min/30,6)*2+(a.tp=='Prova'?10:0),d,df}}
+const lvl=v=>v>=62?['Muito alta','r','chevrons-up']:v>=48?['Alta','y','chevron-up']:v>=32?['Média','b','minus']:['Baixa','g','chevron-down'];
+const badge=v=>{const l=lvl(v);return`<span class="bd ${l[1]}">${ico(l[2])}${l[0]}</span>`};
+const ub=d=>d<0?['Atrasada','r','triangle-alert']:d<=2?['Muito urgente','r','triangle-alert']:d<=6?['Prazo próximo','y','clock']:['Prazo distante','g','circle-check'];
+function reason(a){const x=score(a);return`${esc(a.m||a.t)} tem prioridade ${lvl(x.v)[0].toLowerCase()} porque ${a.tp=='Prova'?'a prova':'a entrega ('+esc(a.tp.toLowerCase())+')'} ${x.d<0?'está atrasada':x.d==0?'é hoje':'acontece em '+x.d+' dia(s)'}${x.df==3?', você marcou a matéria como difícil':''}${a.min>=120?' e a atividade exige bastante tempo ('+fmt(a.min)+')':''}. Por isso reservamos ${x.v>=48?'mais':'menos'} tempo para ela.`}
+/* --- geração do cronograma --- */
+function free(day,dur,after){const w=wd(day).getDay(),n=new Date(),bz=busy(day);
+for(const[a,b]of S.av[w]||[]){let c=tm(a);const e=tm(b);if(day==today())c=Math.max(c,Math.ceil((n.getHours()*60+n.getMinutes())/5)*5);if(after!=null)c=Math.max(c,after);
+const bl=S.ses.filter(s=>s.date==day).map(s=>[s.s-10,s.s+s.dur+10]).concat(bz).sort((x,y)=>x[0]-y[0]);for(const[x,y]of bl)if(x<c+dur&&y>c)c=y;
+if(c+dur<=e)return c}return -1}
+function gen(full){const t=today();S.ses=S.ses.filter(s=>S.acts.some(a=>a.id==s.aid&&!a.done)||s.done);
+if(full)S.ses=S.ses.filter(s=>s.done||s.date<t);
+const rem={},w={};S.acts.forEach(a=>{if(!a.done){rem[a.id]=NS.includes(a.tp)?0:a.min-S.ses.filter(s=>s.aid==a.id).reduce((q,s)=>q+s.dur,0);w[a.id]=score(a).v}});
+for(let i=0;i<7;i++){const day=add(t,i);let cap=S.pref.day-S.ses.filter(s=>s.date==day).reduce((q,s)=>q+s.dur,0);
+while(cap>=15){const cs=S.acts.filter(a=>rem[a.id]>0&&(diff(a.due)>=i||diff(a.due)<0)).sort((x,y)=>w[y.id]-w[x.id]);let ok=0;
+for(const a of cs){const dur=Math.min(S.pref.blk,rem[a.id],cap),st=free(day,dur);if(st>=0){S.ses.push({id:S.nid++,date:day,s:st,dur,aid:a.id,m:a.m,l:a.t,done:0});rem[a.id]-=dur;cap-=dur;w[a.id]*=.8;ok=1;break}}
+if(!ok)break}}}
+/* --- dados --- */
+function base(u){return{u,pts:0,g:{init:1,cl:{},ach:{},best:0,mc:0,lv:1},sub:['Matemática','Português','História','Ciências','Geografia','Inglês'].map(n=>({n,d:2})),acts:[],ses:[],log:[],wk:[],nid:10,
+av:{1:[['17:00','19:00']],2:[['16:30','18:30']],3:[['17:30','20:00']],4:[['16:00','18:00']],5:[['17:00','19:00']],6:[['09:00','12:00']],0:[]},
+pref:{blk:40,day:120,goal:'Melhorar meu desempenho geral'},goals:[{t:'Estudar 5 horas',k:'h',v:300},{t:'Fazer todas as tarefas',k:'a'}]}}
+function demo(){const t=today(),_tr=S&&S.tour;S=base({n:'Lucas',serie:'8º ano',escola:'Escola Exemplo'});S.demo=1;S.pts=60;S.g.init=0;S.tour=_tr;
+S.sub=[{n:'Matemática',d:3,nota:6.5,obj:'Melhorar minhas notas'},{n:'Português',d:2},{n:'História',d:1},{n:'Ciências',d:2},{n:'Geografia',d:1},{n:'Inglês',d:1}];
+S.acts=[[1,'Prova de Matemática','Matemática','Prova',2,180],[2,'Tarefa de Português','Português','Tarefa',1,50],[3,'Trabalho de História','História','Trabalho',7,120],[4,'Revisão de Ciências','Ciências','Revisão',14,60],[5,'Seminário de Geografia','Geografia','Seminário',5,90]].map(a=>({id:a[0],t:a[1],m:a[2],tp:a[3],due:add(t,a[4]),min:a[5],done:0}));
+S.goals=[{t:'Estudar 5 horas',k:'h',v:300},{t:'Fazer todas as tarefas',k:'a'},{t:'Revisar Matemática 3 vezes',k:'m',v:3},{t:'Estudar antes das provas',k:'p'}];
+S.log=[{d:add(t,-1),m:'Matemática',min:50},{d:add(t,-2),m:'Português',min:40}];S.nid=200;
+S.wk=[{id:101,t:'Escola',cat:'Escola',fix:1,days:[1,2,3,4,5],date:'',s:420,e:720,trav:20,obs:''},{id:102,t:'Futebol',cat:'Esporte',fix:1,days:[2,4],date:'',s:960,e:1050,trav:15,obs:''},{id:103,t:'Curso de inglês',cat:'Curso',fix:1,days:[6],date:'',s:540,e:660,trav:0,obs:''}];gen(1);save()}
+/* --- estatísticas --- */
+const wk=()=>{const t=today(),a=add(t,-wd(t).getDay());return[a,add(a,6)]};
+const weekSes=()=>{const[a,b]=wk();return S.ses.filter(s=>s.date>=a&&s.date<=b)};
+const weekMin=()=>{const[a,b]=wk();return S.log.filter(l=>l.d>=a&&l.d<=b).reduce((q,l)=>q+l.min,0)};
+const wprog=()=>{const w=weekSes();return w.length?Math.round(w.filter(s=>s.done).length/w.length*100):0};
+function streak(){let n=0,d=today();const ds=new Set(S.log.map(l=>l.d));if(!ds.has(d))d=add(d,-1);while(ds.has(d)){n++;d=add(d,-1)}return n}
+function gp(g){if(g.k=='h')return[weekMin(),g.v];
+if(g.k=='a'){const a=S.acts.filter(x=>x.tp!='Prova');return[a.filter(x=>x.done).length,a.length||1]}
+if(g.k=='m')return[S.ses.filter(s=>s.done&&s.m=='Matemática').length,g.v];
+const p=S.ses.filter(s=>S.acts.some(a=>a.id==s.aid&&a.tp=='Prova'));return[p.filter(s=>s.done).length,p.length||1]}
+const gdone=g=>{const[c,t]=gp(g);return c>=t};
+/* --- componentes --- */
+const row=s=>{const a=S.acts.find(x=>x.id==s.aid);return`<div class="it ${s.done?'dn':''}"><label class="ck"><input type="checkbox" ${s.done?'checked':''} onchange="tg(${s.id})"><span>Concluído</span></label><div class="g"><b>${hm(s.s)} — ${esc(s.l)}</b><small>${esc(s.m)} · ${fmt(s.dur)}</small>${a?badge(score(a).v):''}</div>${s.done?'':`<button class="ln" onclick="miss(${s.id})">Não consegui concluir</button>`}</div>`};
+const list=ss=>ss.map((s,i)=>{const p=ss[i-1],g=p?s.s-(p.s+p.dur):99;return(g>0&&g<=20?`<div class="it br">${ico('coffee')}${hm(p.s+p.dur)} — Intervalo · ${g} min</div>`:'')+row(s)}).join('');
+function tg(id){const s=S.ses.find(x=>x.id==id);s.done=s.done?0:1;
+if(s.done){S.log.push({d:today(),m:s.m,min:s.dur,sid:id});S.pts+=20;toast('Sessão concluída! +20 XP')}else{S.log=S.log.filter(l=>l.sid!=id);S.pts-=20}save();render()}
+function miss(id){$('#md').innerHTML=`<div class="ov"><div class="card" role="dialog"><h3>Tudo bem!</h3><p>Deseja reorganizar sua rotina?</p><p class="m">Vamos mover só essa atividade para o próximo horário livre, sem apagar as outras.</p><button class="btn" onclick="reorg(${id})">Reorganizar automaticamente</button><button class="btn o" onclick="cm()">Cancelar</button></div></div>`}
+const cm=()=>$('#md').innerHTML='';
+function reorg(id){const s=S.ses.find(x=>x.id==id);cm();
+for(let i=0;i<14;i++){const day=add(s.date,i);if(day<today())continue;const st=free(day,s.dur,day==s.date?s.s+s.dur+10:null);
+if(st>=0){s.date=day;s.s=st;save();render();return toast(`Movida para ${DN[wd(day).getDay()]} às ${hm(st)}`)}}toast('Sem horário livre nos próximos 14 dias. Ajuste sua disponibilidade.')}
+function rems(){const r=[];S.acts.filter(a=>!a.done).forEach(a=>{const d=diff(a.due);if(a.tp=='Prova'&&d>=0&&d<=7)r.push(`Você tem uma prova de ${a.m} ${d?'daqui a '+d+' dia(s)':'hoje'}.`);else if(d==1)r.push(`Você tem "${a.t}" para amanhã.`);else if(d<0)r.push(`Atrasada: "${a.t}".`)});
+const n=S.ses.filter(s=>s.date==today()&&!s.done).sort((a,b)=>a.s-b.s)[0];if(n)r.push(`Está na hora de começar sua sessão de estudos: ${n.m} às ${hm(n.s)}.`);
+if(S.goals.length&&S.goals.every(gdone))r.push('Parabéns! Você concluiu suas metas da semana.');return r}
+/* --- telas --- */
+function vPlan(){let h=`<h1>Meu plano de estudos</h1><p class="m">Montado com base em provas, prazos, dificuldades e seus horários livres.</p><button class="btn" onclick="gen(1);save();render();toast('Plano gerado novamente')">${ico('refresh-cw')}Gerar plano automático</button><small class="hn">O app escolhe o que estudar em cada dia, usando seus horários livres. Gere de novo se mudar algo na agenda.</small>`;
+for(let i=0;i<7;i++){const d=add(today(),i),ss=S.ses.filter(s=>s.date==d).sort((a,b)=>a.s-b.s);h+=`<div class="card" style="margin-top:14px"><h3>${DN[wd(d).getDay()].toUpperCase()} <small>${ddm(d)}</small></h3>${list(ss)||'<p class="m">Livre — sem sessões.</p>'}</div>`}
+const o=S.acts.filter(a=>!a.done).sort((a,b)=>score(b).v-score(a).v);
+return h+`<div class="card"><h3>${ico('lightbulb')}Por que essa ordem?</h3>${o.map(a=>`<details><summary>Por que "${esc(a.t)}"? ${badge(score(a).v)}</summary><p>${reason(a)}</p></details>`).join('')||'<p class="m">Sem atividades pendentes.</p>'}</div>`}
+const opt=(arr,sel)=>arr.map(x=>`<option ${x==sel?'selected':''}>${esc(x)}</option>`).join('');
+let FT='Todos';const CAT=['Prova','Trabalho','Apresentação','Aula','Tarefa','Estudo','Reunião','Outros'];
+function addA(){const t=V0('#an').trim(),d=V0('#ad');if(!t||!d){$('#er').textContent='Preencha o título e a data para adicionar.';return}
+S.acts.push({id:S.nid++,t,m:V0('#am'),tp:V0('#at'),due:d,hr:V0('#ah'),x:V0('#ax').trim(),min:Math.max(10,+V0('#amin')||60),done:0});NF=0;gen();save();render();toast('Compromisso adicionado e plano atualizado')}
+function doneA(id){const _a=S.acts.find(a=>a.id==id);_a.done=1;_a.dd=today();S.pts+=10;S.ses=S.ses.filter(s=>s.aid!=id||s.done);save();render();toast('Atividade concluída! +10 XP')}
+function delA(id){S.acts=S.acts.filter(a=>a.id!=id);S.ses=S.ses.filter(s=>s.aid!=id||s.done);save();render()}
+const IC={Matemática:'calculator',Português:'book-open-text',História:'landmark',Ciências:'flask-conical',Geografia:'globe',Inglês:'languages','Educação Física':'dumbbell',Artes:'palette'},ic=n=>ico(IC[n]||'book');
+function vSubj(){return`<h1>Matérias</h1><p class="m">As matérias ajudam o app a decidir o que estudar primeiro. Em “Editar”, marque a dificuldade de cada uma.</p><div class="card"><h3>${ico('plus')}Adicionar matéria</h3><div class="rw"><input id="sn" placeholder="Ex.: Física" aria-label="Nome da matéria" maxlength="40" onkeydown="if(event.key=='Enter')addS()"><button class="btn" onclick="addS()">Adicionar</button></div><small class="hn">Digite o nome ou toque em uma sugestão:</small><div>${SUG.filter(n=>!S.sub.some(s=>s.n==n)).map(n=>`<button class="chp" onclick="addS('${n}')">+ ${n}</button>`).join('')}</div></div><div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">${S.sub.map((s,i)=>{const as=S.acts.filter(a=>a.m==s.n),pl=as.reduce((q,a)=>q+a.min,0),st=S.log.filter(l=>l.m==s.n).reduce((q,l)=>q+l.min,0),p=pl?Math.min(100,Math.round(st/pl*100)):0;
+return`<div class="card"><div class="sg" aria-hidden="true">${ic(s.n)}</div><b>${esc(s.n)}</b><span class="bd b">${DF[s.d]}</span><p class="m" style="margin:4px 0">${esc(s.obj||'Sem descrição')}</p><small>Progresso: ${p}%</small>${bar(p,'var(--g)')}<p style="margin:10px 0 2px"><b>Atividades</b></p>${as.filter(a=>!a.done).map(a=>`<small>• ${esc(a.t)} (${ddm(a.due)})</small>`).join('')||'<small>Nenhuma pendente</small>'}
+<details><summary>Editar</summary><label class="f">Dificuldade<select onchange="S.sub[${i}].d=+this.value;gen();save();render()">${[1,2,3].map(v=>`<option value="${v}" ${s.d==v?'selected':''}>${DF[v]}</option>`).join('')}</select></label><label class="f">Nota atual (opcional)<input type="number" step=".1" min="0" max="10" value="${s.nota==null?'':s.nota}" onchange="S.sub[${i}].nota=this.value;save()"></label><label class="f">Descrição / objetivo<input value="${esc(s.obj||'')}" onchange="S.sub[${i}].obj=this.value;save()"></label><button class="ln" onclick="S.sub.splice(${i},1);save();render()">Excluir matéria</button></details></div>`}).join('')}</div>`}
+function addS(x){const n=(x||V0('#sn')||'').trim();if(!n)return;if(S.sub.some(s=>s.n.toLowerCase()==n.toLowerCase()))return toast('Essa matéria já está na lista.');S.sub.push({n,d:2});save();render();toast('Matéria adicionada: '+n)}
+function vProg(){const w=weekSes();
+return`<h1>Meu progresso</h1><div class="grid"><div class="card"><span class="m">Horas na semana</span><div class="big">${fmt(weekMin())}</div></div><div class="card"><span class="m">Concluídas / pendentes</span><div class="big">${w.filter(s=>s.done).length} / ${w.filter(s=>!s.done).length}</div></div><div class="card"><span class="m">${ico('flame')}Sequência</span><div class="big">${streak()} dia(s)</div></div><div class="card"><span class="m">${ico('star')}XP · Nível ${lvI(S.pts).l}</span><div class="big">${S.pts}</div></div></div>
+<div class="card" style="margin-top:16px"><h3>Progresso por matéria</h3>${S.sub.map(s=>{const pl=S.acts.filter(a=>a.m==s.n).reduce((q,a)=>q+a.min,0),st=S.log.filter(l=>l.m==s.n).reduce((q,l)=>q+l.min,0),p=pl?Math.min(100,Math.round(st/pl*100)):0;return`<p style="margin:10px 0 4px">${esc(s.n)}: <b>${p}%</b></p>${bar(p,'var(--p)')}`}).join('')}</div>
+${aCard(6)}`}
+function vGoals(){const all=S.goals.length&&S.goals.every(gdone);if(all&&!S.bonus){S.bonus=1;S.pts+=50;save()}
+const tot=S.goals.length?Math.round(S.goals.reduce((q,g)=>{const[c,t]=gp(g);return q+Math.min(1,c/t)},0)/S.goals.length*100):0;
+return`<h1>Metas da semana</h1><div class="card"><b>Progresso geral: ${tot}%</b>${bar(tot,'var(--g)')}${all?`<p>${ico('party-popper')}Meta semanal concluída! +50 XP</p>`:''}</div>${S.goals.map((g,i)=>{const[c,t]=gp(g),p=Math.min(100,Math.round(c/t*100));return`<div class="card"><b>${ico(gdone(g)?'square-check-big':'square')}${esc(g.t)}</b> <small>${g.k=='h'?fmt(c)+' de '+fmt(t):c+' de '+t}</small>${bar(p,gdone(g)?'var(--g)':'var(--b)')}<button class="ln" onclick="S.goals.splice(${i},1);save();render()">Remover</button></div>`}).join('')}
+<div class="card"><h3>Nova meta de horas</h3><div class="rw"><input id="gh" type="number" min="1" placeholder="Ex.: 5 horas na semana"><button class="btn" onclick="const h=+V0('#gh');if(h){S.goals.push({t:'Estudar '+h+' horas',k:'h',v:h*60});save();render()}">Adicionar</button></div></div>`}
+function mm(s){return String(s/60|0).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
+function vTimer(){return`<h1>Cronômetro de estudos</h1><div class="card c"><div class="fg"><label class="f">Duração<select id="tmS" onchange="tset()"><option value="25">25 minutos</option><option value="40">40 minutos</option><option value="50">50 minutos</option><option value="0">Personalizado</option></select></label><label class="f">Minutos (personalizado)<input id="tc" type="number" min="1" value="30" onchange="tset()"></label><label class="f">Matéria<select id="tsub">${opt(S.sub.map(s=>s.n))}</select></label></div><div class="clk" id="td">${mm(T.left)}</div><button class="btn" onclick="tgo()">Iniciar</button><button class="btn s" onclick="tpause()">Pausar</button><button class="btn o" onclick="tfin()">Finalizar</button><p class="m">Ao finalizar, o tempo estudado é registrado automaticamente.</p></div>`}
+function tset(){const v=+V0('#tmS');T.sel=v;const m=v||+V0('#tc')||25;T.tot=T.left=m*60;T.el=0;tpause();$('#td').textContent=mm(T.left)}
+function tgo(){if(T.on)return;T.on=1;TI=setInterval(()=>{T.left--;T.el++;const e=$('#td');if(e)e.textContent=mm(T.left);if(T.left<=0)tfin(1)},1000)}
+function tpause(){T.on=0;clearInterval(TI)}
+function tfin(auto){tpause();const m=Math.round(T.el/60);if(m>=1){S.log.push({d:today(),m:V0('#tsub')||S.sub[0].n,min:m});if(auto)S.pts+=20;toast(`Registrado: ${m} min estudados${auto?' · +20 XP':''}`)}else toast('Tempo curto demais para registrar.');
+T.left=T.tot;T.el=0;save();if(V=='timer')render()}
+function vCal(){const ev={},put=(d,l,c)=>(ev[d]=ev[d]||[]).push([l,c]);S.acts.forEach(a=>put(a.due,a.tp+': '+a.t,TP[a.tp]));S.ses.forEach(s=>put(s.date,hm(s.s)+' '+s.m,TP.Sessão));
+let h=`<h1>Calendário</h1><div class="rw"><button class="btn ${CM=='sem'?'':'s'}" onclick="CM='sem';render()">Semana</button><button class="btn ${CM=='mes'?'':'s'}" onclick="CM='mes';render()">Mês</button></div><div class="lg card">${Object.keys(TP).map(k=>`<span><i style="background:${TP[k]}"></i>${k=='Sessão'?'Sessão de estudo':k}</span>`).join('')}${Object.keys(CC).map(k=>`<span><i style="background:${CC[k]}"></i>${k}</span>`).join('')}</div>`;
+if(CM=='sem'){for(let i=0;i<7;i++){const d=add(today(),i);wkOn(d).forEach(w=>put(d,hm(w.s)+' '+w.t,CC[w.cat]||CC.Outro));h+=`<div class="card"><b>${DN[wd(d).getDay()]} ${ddm(d)}</b>${(ev[d]||[]).map(e=>`<div style="border-left:5px solid ${e[1]};padding:2px 8px;margin:4px 0">${esc(e[0])}</div>`).join('')||'<p class="m">Livre</p>'}</div>`}return h}
+const b=new Date();b.setDate(1);b.setMonth(b.getMonth()+CO);const y=b.getFullYear(),mo=b.getMonth(),n=new Date(y,mo+1,0).getDate();
+h+=`<div class="rw"><button class="btn o" onclick="CO--;render()" aria-label="Mês anterior">${ico('chevron-left')}</button><b style="flex:1;text-align:center;align-self:center">${b.toLocaleDateString('pt-BR',{month:'long',year:'numeric'})}</b><button class="btn o" onclick="CO++;render()" aria-label="Próximo mês">${ico('chevron-right')}</button></div><div class="cal">${['D','S','T','Q','Q','S','S'].map(x=>`<div class="h">${x}</div>`).join('')}`;
+for(let i=0;i<b.getDay();i++)h+='<div></div>';
+for(let d=1;d<=n;d++){const k=iso(new Date(y,mo,d));wkOn(k).forEach(w=>put(k,hm(w.s)+' '+w.t,CC[w.cat]||CC.Outro));const e=ev[k]||[];h+=`<div ${k==today()?'style="outline:2px solid var(--b)"':''}><b>${d}</b>${e.slice(0,2).map(x=>`<span class="ch" style="background:${x[1]}">${esc(x[0])}</span>`).join('')}${e.length>2?`<small>+${e.length-2}</small>`:''}</div>`}
+return h+'</div>'}
+function av(d,i,j,v){S.av[d][i][j]=v;gen(1);save()}
+/* --- gamificação: XP, níveis, missões, conquistas, sequência --- */
+const LT=['Novato','Aprendiz','Explorador','Estudioso','Dedicado','Expert','Veterano','Mestre','Campeão','Lenda'];
+const lvX=l=>50*l*(l-1);
+function lvI(xp){xp=Math.max(0,xp|0);let l=1;while(xp>=lvX(l+1))l++;const a=lvX(l),b=lvX(l+1);return{l,c:xp-a,n:b-a,p:Math.round((xp-a)/(b-a)*100),t:LT[Math.min(9,l-1)]}}
+function G(){if(!S.g)S.g={init:0,cl:{},ach:{},best:0,mc:0,lv:1};return S.g}
+const tD=()=>S.log.filter(l=>l.sid!=null).length+S.acts.filter(a=>a.done).length,tM=()=>S.log.reduce((q,l)=>q+l.min,0),stDone=()=>new Set(S.log.map(l=>l.d)).has(today());
+const MB=25,MS=[
+{id:'t',ic:'timer',n:'Estudar por 30 minutos',tot:30,xp:15,u:1,pr:d=>S.log.filter(l=>l.d==d).reduce((q,l)=>q+l.min,0)},
+{id:'k',ic:'square-check-big',n:'Concluir 3 tarefas',tot:3,xp:20,pr:d=>S.log.filter(l=>l.d==d&&l.sid!=null).length+S.acts.filter(a=>a.dd==d).length},
+{id:'r',ic:'book-open',n:'Revisar uma matéria (15 min na mesma)',tot:15,xp:15,u:1,pr:d=>{const m={};S.log.filter(l=>l.d==d).forEach(l=>m[l.m]=(m[l.m]||0)+l.min);return Math.max(0,...Object.values(m))}}];
+function mis(){const d=today(),g=G();return MS.map(m=>{const c=Math.min(m.tot,m.pr(d));return Object.assign({},m,{c,ok:c>=m.tot,cl:!!g.cl[d+m.id],p:Math.round(c/m.tot*100)})})}
+function claim(id){const d=today(),g=G(),m=mis().find(x=>x.id==id);if(!m||!m.ok||m.cl)return;
+g.cl[d+id]=1;g.mc++;S.pts+=m.xp;let t='Missão cumprida! +'+m.xp+' XP';
+if(mis().every(x=>x.cl)&&!g.cl[d+'b']){g.cl[d+'b']=1;S.pts+=MB;t+=' · Bônus do dia +'+MB+' XP'}
+const lim=add(d,-14);for(const k in g.cl)if(k.slice(0,10)<lim)delete g.cl[k];
+save();render();toast(t)}
+const AC=[
+['first','rocket','Primeiro passo','Conclua sua primeira tarefa','#F97316',()=>tD()>=1],
+['s3','flame','Pegando o ritmo','Estude 3 dias seguidos','#FB923C',()=>G().best>=3],
+['s7','flame','Semana de fogo','Estude 7 dias seguidos','#EF4444',()=>G().best>=7],
+['s30','crown','Imparável','Estude 30 dias seguidos','#F59E0B',()=>G().best>=30],
+['t10','square-check-big','Mão na massa','Conclua 10 tarefas','#10B981',()=>tD()>=10],
+['t50','medal','Máquina de tarefas','Conclua 50 tarefas','#059669',()=>tD()>=50],
+['h1','timer','Primeira hora','Acumule 1 hora de estudo','#3B82F6',()=>tM()>=60],
+['h10','hourglass','Maratonista','Acumule 10 horas de estudo','#6366F1',()=>tM()>=600],
+['m1','gift','Missão cumprida','Resgate sua primeira missão','#EC4899',()=>G().mc>=1],
+['m10','target','Caçador de missões','Resgate 10 missões','#D946EF',()=>G().mc>=10],
+['sub','book-open','Curioso','Estude 4 matérias diferentes','#06B6D4',()=>new Set(S.log.map(l=>l.m)).size>=4],
+['pv','graduation-cap','Pronto para a prova','Conclua uma prova','#8B5CF6',()=>S.acts.some(a=>a.done&&a.tp=='Prova')],
+['mt','trophy','Metas em dia','Conclua todas as metas da semana','#EAB308',()=>S.goals.length>0&&S.goals.every(gdone)],
+['l5','star','Nível 5','Chegue ao nível 5','#7C3AED',()=>lvI(S.pts).l>=5]];
+function gamChk(){const g=G(),q=g.init,st=streak();if(st>g.best)g.best=st;
+AC.forEach(a=>{if(!g.ach[a[0]]&&a[5]()){g.ach[a[0]]=today();if(q){S.pts+=20;GQ.push({k:'a',a})}}});
+const L=lvI(S.pts).l;if(q&&L>g.lv)GQ.push({k:'l',l:L});g.lv=Math.max(g.lv,L);g.init=1;if(GQ.length)setTimeout(popQ,450)}
+function popQ(){if(!GQ.length||!S||!IN)return;const m=$('#md');if(m.innerHTML||TR.on){setTimeout(popQ,1200);return}
+const x=GQ.shift(),cl=['#FBBF24','#3B82F6','#10B981','#F472B6','#A78BFA'],cf=Array.from({length:16},(_,i)=>`<i style="left:${(i*37+11)%100}%;background:${cl[i%5]};animation-delay:${(i%8)*.08}s"></i>`).join('');
+m.innerHTML=`<div class="ov" onclick="if(event.target==this)cq()"><div class="card pop c" role="dialog" aria-modal="true"><div class="cf" aria-hidden="true">${cf}</div>${x.k=='l'?`<div class="lvb big2">${x.l}</div><h2>Subiu de nível!</h2><p>Você agora é <b>${LT[Math.min(9,x.l-1)]}</b> (nível ${x.l}). Continue assim!</p>`:`<div class="medal" style="--mc:${x.a[4]}">${ico(x.a[1])}</div><h2>Conquista desbloqueada!</h2><p><b>${x.a[2]}</b><br><span class="m">${x.a[3]} · +20 XP</span></p>`}<button class="btn" onclick="cq()">Continuar</button></div></div>`}
+function cq(){cm();setTimeout(popQ,250)}
+function wdots(){const ds=new Set(S.log.map(l=>l.d)),t=today();return Array.from({length:7},(_,i)=>{const d=add(t,i-6),on=ds.has(d);return`<div class="sd ${on?'on':''} ${d==t?'td':''}"><span>${DS[wd(d).getDay()]}</span><b>${on?ico('check'):''}</b></div>`}).join('')}
+function hero(){const L=lvI(S.pts),st=streak(),ms=mis(),n=Object.keys(G().ach).length;
+return`<div class="hero2"><div class="h2t"><div class="lvb">${L.l}<small>NÍVEL</small></div><div class="h2i"><b>${L.t}</b><span>${esc(S.u.n)}</span><div class="xpb">${bar(L.p,'linear-gradient(90deg,#FBBF24,#F59E0B)')}</div><small>${L.c} / ${L.n} XP para o nível ${L.l+1} · ${S.pts} XP no total</small></div></div>
+<div class="chips"><div class="gc"><span class="flm ${st?'':'off'}">${ico('flame','f')}</span><b>${st}</b><small>${st==1?'dia seguido':'dias seguidos'}</small></div><div class="gc">${ico('target')}<b>${ms.filter(x=>x.cl).length}/${ms.length}</b><small>missões</small></div><div class="gc">${ico('medal')}<b>${n}/${AC.length}</b><small>conquistas</small></div></div></div>`}
+function mCard(){const ms=mis(),dn=ms.filter(x=>x.cl).length,all=dn==ms.length;
+return`<div class="card"><h3>${ico('target')}Missões diárias <span class="bd ${all?'g':'b'}">${dn}/${ms.length}</span></h3>${ms.map(m=>`<div class="ms ${m.cl?'dn':''}"><span class="mi">${ico(m.ic)}</span><div class="g"><b>${m.n}</b>${bar(m.p,m.ok?'var(--g)':'#F59E0B')}<small>${m.c}/${m.tot}${m.u?' min':''} · +${m.xp} XP</small></div>${m.cl?`<span class="bd g">${ico('check')}Resgatada</span>`:m.ok?`<button class="btn sm gl" onclick="claim('${m.id}')">${ico('gift')}Resgatar</button>`:''}</div>`).join('')}<small>${all?'Todas as missões feitas! Bônus de +'+MB+' XP recebido.':'Complete as 3 missões para ganhar +'+MB+' XP de bônus.'} As missões renovam todo dia.</small></div>`}
+function sCard(){const st=streak(),b=Math.max(G().best,st);
+return`<div class="card"><h3>${ico('flame')}Sequência de estudos</h3><div class="stk"><span class="flm big3 ${st?'':'off'}">${ico('flame','f')}</span><div><div class="big" style="font-size:2rem">${st} ${st==1?'dia':'dias'}</div><small>Recorde: ${b} ${b==1?'dia':'dias'}</small></div></div><div class="sdw">${wdots()}</div><p class="m" style="margin-bottom:0">${stDone()?'Você já estudou hoje. Sequência garantida!':st?'Estude hoje para não perder sua sequência de '+st+' dia(s).':'Estude hoje para começar uma sequência.'}</p></div>`}
+function aGrid(lim){const g=G(),l=lim?AC.slice().sort((a,b)=>(g.ach[b[0]]?1:0)-(g.ach[a[0]]?1:0)).slice(0,lim):AC;
+return`<div class="agr">${l.map(a=>{const u=g.ach[a[0]];return`<div class="ab ${u?'on':''}" style="--mc:${a[4]}"><span class="medal sm">${ico(u?a[1]:'lock')}</span><b>${a[2]}</b><small>${a[3]}</small></div>`}).join('')}</div>`}
+function aCard(lim){const n=Object.keys(G().ach).length;return`<div class="card"><h3>${ico('medal')}Conquistas <span class="bd b">${n}/${AC.length}</span></h3>${aGrid(lim)}${lim?`<button class="btn s" style="margin-top:12px" onclick="go('game')">Ver todas</button>`:''}</div>`}
+function vGame(){return`<h1>Missões e conquistas</h1>${hero()}${mCard()}${sCard()}${aCard()}<div class="card"><h3>${ico('zap')}Como ganhar XP</h3><p style="margin:0">• Concluir sessão de estudo: +20 XP<br>• Concluir compromisso: +10 XP<br>• Cronômetro até o fim: +20 XP<br>• Missões: +15 a +20 XP, e +${MB} XP de bônus<br>• Meta semanal: +50 XP<br>• Cada conquista: +20 XP</p></div>`}
+/* --- UX: navegação simples, tela inicial, cadastros guiados e tutorial --- */
+const MORE=['subj','prog','goals','timer','cal','rev','set'],PH={rn:'Ex.: Maria',re:'nome@email.com',rp:'Letras e números',rc:'Repita a senha'};
+const SUG=['Matemática','Português','História','Geografia','Ciências','Inglês','Física','Química','Biologia','Artes','Educação Física','Redação','Filosofia','Sociologia'];
+let NF=0,WN=0,AVO=0,TR={on:0,i:0,shown:0,r:-1};
+const qd=n=>{$('#ad').value=add(today(),n)};
+/* --- tela inicial --- */
+function todayItems(){const t=today(),it=[];
+wkOn(t).forEach(w=>it.push({s:w.s,h:`<div class="it">${wi(w)}<div class="g"><b>${esc(w.t)}</b><small>${hm(w.s)} às ${hm(w.e)}${w.trav?' · '+w.trav+' min de deslocamento':''}</small></div><span class="bd b">Rotina fixa</span></div>`}));
+S.ses.filter(s=>s.date==t).forEach(s=>it.push({s:s.s,h:row(s)}));
+return it.sort((a,b)=>a.s-b.s)}
+function firstSteps(){return`<div class="card" style="border-left:5px solid var(--b)"><h3>${ico('rocket')}Primeiros passos</h3><p class="m" style="margin-top:0">Faça isto uma vez e o app monta seu plano sozinho:</p>
+<div class="it"><span class="mi">${ico('book-open')}</span><div class="g"><b>1. Veja suas matérias</b><small>Já deixamos algumas prontas. Adicione ou ajuste.</small></div><button class="btn s sm" onclick="go('subj')">Abrir</button></div>
+<div class="it"><span class="mi">${ico('calendar-days')}</span><div class="g"><b>2. Cadastre sua rotina</b><small>Ex.: Escola, Seg a Sex, 07:00 às 12:00</small></div><button class="btn s sm" onclick="AT='wk';go('acts')">Abrir</button></div>
+<div class="it"><span class="mi">${ico('clipboard-list')}</span><div class="g"><b>3. Adicione provas e tarefas</b><small>Ex.: Prova de Matemática, dia 20</small></div><button class="btn s sm" onclick="AT='ent';go('acts')">Abrir</button></div></div>`}
+function heroMini(){const L=lvI(S.pts),st=streak();
+return`<div class="hero2 mini" onclick="go('game')" onkeydown="if(event.key=='Enter')go('game')" role="button" tabindex="0" aria-label="Nível ${L.l}, ${S.pts} XP. Abrir missões e conquistas"><div class="h2t"><div class="lvb">${L.l}<small>NÍVEL</small></div><div class="h2i"><b>${L.t}</b><div class="xpb">${bar(L.p,'linear-gradient(90deg,#FBBF24,#F59E0B)')}</div><small>${L.c} / ${L.n} XP para o próximo nível</small></div><div class="gc"><span class="flm ${st?'':'off'}">${ico('flame','f')}</span><b>${st}</b><small>${st==1?'dia':'dias'}</small></div></div></div>`}
+function vHome(){const t=today(),its=todayItems(),p=wprog(),w=weekSes(),
+nx=S.acts.filter(a=>!a.done).sort((a,b)=>a.due>b.due?1:-1).slice(0,3),
+top=S.acts.filter(a=>!a.done&&!NS.includes(a.tp)).sort((a,b)=>score(b).v-score(a).v)[0],
+rm=rems().filter(r=>r.indexOf('hora de começar')<0).slice(0,2);
+return`<h1>Olá, ${esc(S.u.n)}!</h1><p class="m" style="margin-top:0">${DN[wd(t).getDay()]}, ${ddm(t)}</p>${S.demo?'<div class="nt">Modo demonstração: todos os dados são apenas exemplos fictícios.</div>':''}
+${S.u.serie?'':`<div class="card"><label class="f">Qual é o seu ano/série?<select onchange="S.u.serie=this.value;save();render()"><option value="">Selecione</option>${opt(SER)}</select></label></div>`}
+<div id="t-hero">${heroMini()}</div>${!S.acts.length&&!S.wk.length?firstSteps():''}
+${rm.map(r=>`<div class="nt">${ico('bell')} ${esc(r)}</div>`).join('')}
+<div class="card" id="t-today"><h3>${ico('calendar-check')}Rotina de hoje</h3>${its.map(x=>x.h).join('')||'<p class="m">Nada marcado para hoje. Adicione compromissos na Agenda.</p>'}<button class="btn s" onclick="go('timer')">${ico('timer')}Iniciar cronômetro</button></div>
+<div class="card" id="t-next"><h3>${ico('clock')}Próximas tarefas</h3>${nx.map(a=>{const u=ub(diff(a.due));return`<div class="it"><div class="g"><b>${esc(a.t)}</b><small>${esc(a.tp)} · ${ddm(a.due)}${a.hr?' às '+a.hr:''}</small></div><span class="bd ${u[1]}">${ico(u[2])}${u[0]}</span></div>`}).join('')||'<p class="m">Nenhuma tarefa pendente.</p>'}<button class="btn s" onclick="AT='ent';go('acts')">Ver agenda</button>${top?`<details><summary>Por que priorizamos isso?</summary><p>${reason(top)}</p></details>`:''}</div>
+<div class="card" id="t-prog"><h3>${ico('chart-column')}Progresso da semana</h3><div class="big">${p}%</div>${bar(p,'var(--g)')}<small>${w.filter(s=>s.done).length} de ${w.length} sessões concluídas · ${fmt(weekMin())} estudados</small></div>
+${mCard()}`}
+/* --- menu Mais --- */
+function vMore(){const L=[['subj','book-open','Matérias','Cadastre e acompanhe cada matéria'],['goals','target','Metas da semana','Defina quanto quer estudar'],['prog','chart-column','Meu progresso','Horas, sequência e pontos'],['timer','timer','Cronômetro','Estude com tempo marcado'],['cal','calendar','Calendário','Veja provas e estudos no mês'],['rev','star','Avaliar o app','Conte o que achou'],['set','settings','Configurações','Perfil, horários livres e ajuda']];
+return`<h1>Mais opções</h1>${L.map(x=>`<button class="mr" onclick="go('${x[0]}')"><span class="mi">${ico(x[1])}</span><span class="g"><b>${x[2]}</b><small>${x[3]}</small></span>${ico('chevron-right')}</button>`).join('')}<button class="mr" onclick="tourStart()"><span class="mi">${ico('circle-help')}</span><span class="g"><b>Como usar o app</b><small>Rever o tutorial passo a passo</small></span>${ico('chevron-right')}</button>`}
+/* --- agenda --- */
+function vActs(){return`<h1>Agenda</h1><div class="tabs" role="tablist"><button role="tab" class="${AT=='wk'?'on':''}" onclick="AT='wk';render()">${ico('calendar-days')}Rotina semanal</button><button role="tab" class="${AT=='ent'?'on':''}" onclick="AT='ent';render()">${ico('clipboard-list')}Provas e tarefas</button></div>`+(AT=='wk'?vWk():vEnt())}
+function vEnt(){const o=S.acts.filter(a=>FT=='Todos'||a.tp==FT).sort((a,b)=>(a.done?1:0)-(b.done?1:0)||(a.due>b.due?1:-1)),sh=NF||!S.acts.length;
+return`<p class="m">Provas, trabalhos e tarefas com data. O plano de estudos se ajusta sozinho.</p>`+(sh?`<div class="card"><h3>${ico('plus')}Novo compromisso</h3>
+<label class="f">O que você precisa fazer?<input id="an" maxlength="60" placeholder="Ex.: Prova de Matemática"></label>
+<label class="f">Tipo<select id="at">${opt(CAT)}</select></label>
+<label class="f">Para quando?<input id="ad" type="date"><small class="hn">Toque em um atalho ou escolha a data no calendário.</small></label>
+<div class="rw" style="flex-wrap:wrap"><button type="button" class="btn s sm" onclick="qd(0)">Hoje</button><button type="button" class="btn s sm" onclick="qd(1)">Amanhã</button><button type="button" class="btn s sm" onclick="qd(7)">Em 1 semana</button></div>
+<label class="f">Matéria (opcional)<select id="am"><option value="">Sem matéria</option>${opt(S.sub.map(s=>s.n))}</select></label>
+<details><summary>Mais opções</summary><div class="fg" style="margin-top:10px"><label class="f">Horário (opcional)<input id="ah" type="time"></label><label class="f">Tempo de estudo (min)<input id="amin" type="number" min="10" value="60" inputmode="numeric"><small class="hn">Quanto tempo você acha que precisa. Ex.: 60</small></label></div><label class="f">Anotações (opcional)<textarea id="ax" rows="2" placeholder="Ex.: capítulos 3 e 4"></textarea></label></details>
+<div class="er" id="er" role="alert"></div><button class="btn" onclick="addA()">Adicionar</button>${S.acts.length?'<button class="btn o" onclick="NF=0;render()">Cancelar</button>':''}</div>`:`<button class="btn" onclick="NF=1;render()">${ico('plus')}Novo compromisso</button>`)+
+(S.acts.length>3?`<label class="f" style="margin-top:10px">Mostrar<select onchange="FT=this.value;render()">${opt(['Todos',...CAT],FT)}</select></label>`:'')+
+(S.acts.length?`<div class="card" style="margin-top:12px">${o.map(a=>{const u=ub(diff(a.due));return`<div class="it ${a.done?'dn':''}"><div class="g"><b>${esc(a.t)}</b><small>${a.m?esc(a.m)+' · ':''}${esc(a.tp)} · ${ddm(a.due)}${a.hr?' às '+a.hr:''}${NS.includes(a.tp)?'':' · '+fmt(a.min)}</small>${a.x?`<small>${esc(a.x)}</small>`:''}${a.done?`<span class="bd g">${ico('check')}Concluído</span>`:`<span class="bd ${u[1]}">${ico(u[2])}${u[0]}</span>${NS.includes(a.tp)?'':badge(score(a).v)}`}</div>${a.done?'':`<button class="btn s" onclick="doneA(${a.id})">Concluir</button>`}<button class="ln" onclick="delA(${a.id})" aria-label="Excluir ${esc(a.t)}">Excluir</button></div>`}).join('')||'<p class="m">Nenhum compromisso nesta categoria.</p>'}</div>`:'')}
+function wP(n,c){$('#wn').value=n;$('#wc').value=c;if(c=='Escola')wQ('u')}
+function vWk(){const ed=WE!=null?S.wk.find(x=>x.id==WE):null;if(WE!=null&&!ed)WE=null;
+const sh=ed||WN||!S.wk.length,f=ed||{t:'',cat:'Escola',days:[],fix:1,date:'',s:420,e:480,trav:0,obs:''},L=S.wk.slice().sort((a,b)=>(b.fix-a.fix)||(a.s-b.s));
+const form=`<div class="card"><h3>${ico(ed?'pencil':'plus')}${ed?'Editar compromisso':'Novo compromisso'}</h3>
+${ed?'':`<small class="hn" style="margin:0 0 6px">Atalhos:</small><div style="margin-bottom:8px"><button type="button" class="chp" onclick="wP('Escola','Escola')">Escola</button><button type="button" class="chp" onclick="wP('Curso','Curso')">Curso</button><button type="button" class="chp" onclick="wP('Treino','Esporte')">Treino</button><button type="button" class="chp" onclick="wP('Trabalho','Trabalho')">Trabalho</button></div>`}
+<label class="f">Nome<input id="wn" maxlength="60" value="${esc(f.t)}" placeholder="Ex.: Escola, Futebol, Curso de inglês"></label>
+<div class="fg"><label class="f">Categoria<select id="wc">${opt(WCAT,f.cat)}</select></label>
+<label class="f">Repete?<select id="wf" onchange="wTog()"><option value="1" ${f.fix?'selected':''}>Toda semana</option><option value="0" ${f.fix?'':'selected'}>Só uma vez</option></select></label></div>
+<div id="wdd" ${f.fix?'':'hidden'}><label class="f" style="margin-bottom:0">Em quais dias?</label><div class="dys">${OD.map(d=>`<label class="dy"><input type="checkbox" value="${d}" ${f.days.includes(d)?'checked':''} aria-label="${DN[d]}"><span>${DS[d]}</span></label>`).join('')}</div>
+<div class="rw" style="flex-wrap:wrap;margin-top:0"><button type="button" class="btn s sm" onclick="wQ('u')">Seg a Sex</button><button type="button" class="btn s sm" onclick="wQ('e')">Fim de semana</button><button type="button" class="btn o sm" onclick="wQ('n')">Limpar</button></div></div>
+<div id="wdt" ${f.fix?'hidden':''}><label class="f">Data<input id="wdate" type="date" value="${esc(f.date)}"></label></div>
+<div class="fg"><label class="f">Começa às<input id="ws" type="time" value="${hm(f.s)}"></label><label class="f">Termina às<input id="we" type="time" value="${hm(f.e)}"></label></div>
+<small class="hn" style="margin:-4px 0 8px">Ex.: Escola, 07:00 às 12:00.</small>
+<details><summary>Mais opções</summary><label class="f" style="margin-top:10px">Tempo de deslocamento (min por trajeto)<input id="wt" type="number" min="0" max="240" step="5" inputmode="numeric" value="${f.trav||0}"><small class="hn">Tempo de ida ou volta. O app reserva esse tempo antes e depois. Ex.: 20</small></label><label class="f">Observações<textarea id="wo" rows="2" maxlength="200" placeholder="Ex.: levar o uniforme">${esc(f.obs)}</textarea></label></details>
+<div class="er" id="er" role="alert"></div><button class="btn" onclick="saveW()">${ico('check')}${ed?'Salvar alterações':'Adicionar'}</button>${ed||S.wk.length?`<button class="btn o" onclick="WE=null;WN=0;render()">Cancelar</button>`:''}</div>`;
+return`<p class="m">Aulas, cursos e treinos que se repetem. O app evita esses horários ao montar seu plano.</p>`+(sh?form:`<button class="btn" onclick="WN=1;render()">${ico('plus')}Adicionar à rotina</button>`)+
+(L.length?`<div class="card" style="margin-top:12px"><h3>${ico('list-checks')}Minha rotina (${L.length})</h3>${L.map(w=>`<div class="it">${wi(w)}<div class="g"><b>${esc(w.t)}</b><small>${w.fix?dtxt(w.days):DN[wd(w.date).getDay()]+', '+ddm(w.date)} · ${hm(w.s)} às ${hm(w.e)}</small>${w.trav?`<small>${ico('car')}${w.trav} min por trajeto</small>`:''}${w.obs?`<small>${esc(w.obs)}</small>`:''}</div><button class="btn s sm" onclick="editW(${w.id})">${ico('pencil')}Editar</button><button class="ln" onclick="delW(${w.id})" aria-label="Excluir ${esc(w.t)}">${ico('trash-2')}Excluir</button></div>`).join('')}</div>
+<details class="card"><summary>${ico('calendar-days')}Ver semana em grade</summary><div style="margin-top:10px">${wGrid()}</div><div class="lg" style="margin-top:10px">${WCAT.map(k=>`<span><i style="background:${CC[k]}"></i>${k}</span>`).join('')}</div></details>`:'')}
+/* --- configurações --- */
+function avAll(){const a=V0('#qa'),b=V0('#qb');if(!a||!b||tm(b)<=tm(a))return toast('Escolha um início e um término (o término precisa ser depois do início).');
+for(let d=1;d<=5;d++)S.av[d]=[[a,b]];gen(1);save();render();toast('Horário aplicado de segunda a sexta')}
+function vSet(){const sel=(arr,cur,f)=>arr.map(v=>`<option value="${v}" ${cur==v?'selected':''}>${f?f(v):v}</option>`).join('');
+return`<h1>Configurações</h1>
+<div class="card"><h3>${ico('circle-help')}Ajuda</h3><p class="m" style="margin-top:0">Reveja o passo a passo das principais funções do app.</p><button class="btn" onclick="tourStart()">${ico('book-open')}Ver tutorial novamente</button></div>
+<details class="card" open><summary>${ico('user')}Meu perfil</summary><div class="fg" style="margin-top:12px"><label class="f">Nome<input value="${esc(S.u.n)}" placeholder="Ex.: Maria" onchange="S.u.n=this.value;save()"></label><label class="f">Ano/série<select onchange="S.u.serie=this.value;save()"><option value="">Selecione</option>${opt(SER,S.u.serie)}</select></label><label class="f">Escola (opcional)<input value="${esc(S.u.escola||'')}" placeholder="Ex.: Escola Municipal Centro" onchange="S.u.escola=this.value;save()"></label></div></details>
+<details class="card"><summary>${ico('brain')}Preferências de estudo</summary><div class="fg" style="margin-top:12px"><label class="f">Estudar por quanto tempo antes de uma pausa?<select onchange="S.pref.blk=+this.value;gen(1);save()">${sel([25,40,50,60],S.pref.blk,v=>v+' min')}</select><small class="hn">Cada sessão do plano terá esse tamanho, no máximo.</small></label><label class="f">Quanto tempo estudar por dia?<select onchange="S.pref.day=+this.value;gen(1);save()">${sel([30,60,90,120,180],S.pref.day,fmt)}</select><small class="hn">Limite diário usado ao montar o plano.</small></label><label class="f">Principal objetivo<select onchange="S.pref.goal=this.value;save()">${opt(['Melhorar minhas notas','Estudar para uma prova','Evitar acumular tarefas','Criar uma rotina de estudos','Melhorar meu desempenho geral'],S.pref.goal)}</select></label></div></details>
+<details class="card" ${AVO?'open':''} ontoggle="AVO=this.open?1:0"><summary>${ico('clock')}Horários livres para estudar</summary><p class="m">Diga em quais horários você pode estudar. Os compromissos da rotina semanal são descontados automaticamente.</p>
+<div class="card" style="background:var(--bg)"><b>Atalho: mesmo horário de segunda a sexta</b><div class="rw"><input id="qa" type="time" value="17:00" aria-label="Início"><input id="qb" type="time" value="19:00" aria-label="Fim"></div><button class="btn s sm" onclick="avAll()">Aplicar de Seg a Sex</button></div>
+${[1,2,3,4,5,6,0].map(d=>`<div class="card"><b>${DN[d]}</b>${(S.av[d]||[]).map((p,i)=>`<div class="rw"><input type="time" value="${p[0]}" aria-label="Início" onchange="av(${d},${i},0,this.value)"><input type="time" value="${p[1]}" aria-label="Fim" onchange="av(${d},${i},1,this.value)"><button class="btn o" aria-label="Remover período" onclick="S.av[${d}].splice(${i},1);gen(1);save();render()">${ico('x')}</button></div>`).join('')||'<p class="m">Sem horário de estudo neste dia.</p>'}<button class="btn s sm" onclick="(S.av[${d}]=S.av[${d}]||[]).push(['16:00','18:00']);gen(1);save();render()">+ Adicionar horário</button></div>`).join('')}</details>
+<details class="card"><summary>${ico('settings')}Conta e aparência</summary><div style="margin-top:12px">${UID?`<p class="m" style="margin-top:0">${ico('lock')}Conectado como <b>${esc(FBU)}</b><br><span id="sy">${syTxt()}</span></p>`:'<p class="m" style="margin-top:0">Modo de teste: os dados ficam só neste aparelho.</p>'}<button class="btn s" onclick="S.dark=!(document.documentElement.dataset.theme=='dark');save();render()">${ico('moon')}Tema claro/escuro</button>${UID?'':`<button class="btn s" onclick="if(confirm('Isso substitui seus dados atuais pelos dados de exemplo. Continuar?')){demo();render();toast('Dados de exemplo restaurados')}">Restaurar dados de exemplo</button>`}<button class="btn o" onclick="outAcc()">Sair da conta</button></div></details>`}
+/* --- tutorial interativo --- */
+const TS=[
+{t:'Bem-vindo ao Estuda+!',x:'Veja em poucos passos como organizar seus estudos. Você pode pular quando quiser.',v:'home'},
+{t:'Seu nível e XP',x:'Estudar e concluir tarefas dá XP. Toque aqui para ver missões e conquistas.',v:'home',s:'#t-hero'},
+{t:'Rotina de hoje',x:'Aulas, treinos e sessões de estudo do dia ficam aqui. Marque “Concluído” ao terminar.',v:'home',s:'#t-today'},
+{t:'Próximas tarefas',x:'Provas e entregas que estão chegando, da mais próxima para a mais distante.',v:'home',s:'#t-next'},
+{t:'Seu progresso',x:'Veja quanto do plano da semana você já cumpriu.',v:'home',s:'#t-prog'},
+{t:'Meu plano',x:'O app monta o plano sozinho, usando seus horários livres. Se algo mudar, toque em “Gerar plano automático”.',s:'nav [data-t=plan]'},
+{t:'Agenda',x:'Cadastre aqui sua rotina fixa (escola, curso) e suas provas e tarefas.',s:'nav [data-t=acts]'},
+{t:'Missões',x:'Desafios diários, medalhas e sua sequência de dias estudando.',s:'nav [data-t=game]'},
+{t:'Mais',x:'Matérias, metas, progresso, cronômetro, calendário e configurações. O tutorial também fica aqui.',s:'nav [data-t=more]'},
+{t:'Tudo pronto!',x:'Comece cadastrando sua rotina e suas provas na Agenda. Bons estudos!',v:'home'}];
+function tourStart(){TR.i=0;TR.on=1;TR.r=-1;if(V!='home'){V='home';render();scrollTo(0,0)}tourShow()}
+function tourShow(){TR.on=1;const st=TS[TR.i];if(st.v&&V!=st.v){V=st.v;render()}
+const el=st.s&&$(st.s);if(el&&el.scrollIntoView)el.scrollIntoView({block:'center'});tourPos()}
+function tourPos(){if(!TR.on)return;const st=TS[TR.i],el=st.s?$(st.s):null,n=TS.length,h=$('#tour');
+if(!h.firstChild)h.innerHTML='<div class="tb"></div><div class="tr" id="trh"></div><div class="tt" id="ttt" role="dialog" aria-live="polite"></div>';
+const hl=$('#trh'),tt=$('#ttt'),vw=innerWidth,vh=innerHeight,W=Math.min(320,vw-24),cl=(v,a,b)=>Math.max(a,Math.min(b,v));
+let pl='c',pos='',ax=0,ay=0;
+if(el){const b=el.getBoundingClientRect(),x=b.left-6,y=b.top-6,w=b.width+12,hh=b.height+12;
+hl.className='tr';hl.style.cssText=`left:${x}px;top:${y}px;width:${w}px;height:${hh}px`;
+if(vw>=800&&x+w<280){pl='r';const tp=cl(y+hh/2-70,12,vh-230);pos=`left:${x+w+16}px;top:${tp}px`;ay=cl(y+hh/2-tp,20,150)}
+else{const l=cl(x+w/2-W/2,12,vw-W-12);ax=cl(x+w/2-l,22,W-22);if(y+hh/2>vh/2){pl='t';pos=`left:${l}px;bottom:${vh-y+16}px`}else{pl='b';pos=`left:${l}px;top:${y+hh+16}px`}}}
+else{hl.className='tr n';hl.style.cssText='left:50%;top:50%;width:0;height:0';pos=`left:${(vw-W)/2}px;top:${Math.max(16,vh/2-120)}px`}
+tt.className='tt '+pl;tt.style.cssText=`${pos};width:${W}px;--ax:${ax}px;--ay:${ay}px`;
+if(TR.r!==TR.i){TR.r=TR.i;tt.innerHTML=`<small>Passo ${TR.i+1} de ${n}</small><b>${st.t}</b><p>${st.x}</p><div class="tpb"><i style="width:${(TR.i+1)/n*100}%"></i></div><div class="tbt">${TR.i?`<button class="btn s sm" onclick="tourGoTo(-1)">${ico('chevron-left')}Voltar</button>`:''}<span class="sp"></span><button class="btn sm tnx" onclick="tourGoTo(1)">${TR.i==n-1?'Concluir':'Próximo'}${ico(TR.i==n-1?'check':'chevron-right')}</button></div><button class="ln tsk" onclick="tourEnd(1)">Pular tutorial</button>`;const nb=tt.querySelector('.tnx');if(nb&&nb.focus)nb.focus({preventScroll:true})}}
+function tourGoTo(d){TR.i=Math.max(0,TR.i+d);if(TR.i>=TS.length)return tourEnd(0);tourShow()}
+function tourEnd(sk){TR.on=0;TR.r=-1;$('#tour').innerHTML='';S.tour=1;save();toast(sk?'Tutorial pulado. Você pode vê-lo de novo em Configurações.':'Tutorial concluído. Bons estudos!');if(V!='home')go('home')}
+addEventListener('resize',()=>{TR.on&&tourPos()});addEventListener('scroll',()=>{TR.on&&tourPos()},{passive:true});
+addEventListener('keydown',e=>{if(!TR.on)return;if(e.key=='Escape')tourEnd(1);else if(e.key=='ArrowRight')tourGoTo(1);else if(e.key=='ArrowLeft')tourGoTo(-1)});
+/* --- render --- */
+function render(){const a=$('#app');document.documentElement.dataset.theme=S&&S.dark===false?'light':'dark';
+if(!S||!IN){a.innerHTML=UID&&!S?'<div class="c m" style="padding:80px 20px">Carregando…</div>':A?authV():land();return}
+const N=[['home','house','Início'],['plan','calendar-check','Meu plano'],['acts','clipboard-list','Agenda'],['game','trophy','Missões'],['more','menu','Mais']],cur=MORE.includes(V)?'more':V;
+a.innerHTML=`<nav class="sb" aria-label="Menu principal"><b class="logo">Estuda<span>+</span></b>${N.map(n=>`<button data-t="${n[0]}" class="${cur==n[0]?'on':''}" ${cur==n[0]?'aria-current="page"':''} onclick="go('${n[0]}')">${ico(n[1])}<em>${n[2]}</em></button>`).join('')}</nav><main>${MORE.includes(V)?`<button class="ln bk" onclick="go('more')">${ico('arrow-left')}Voltar ao menu Mais</button>`:''}${VW[V]()}</main>`;
+if(V=='timer'){const s=$('#tmS');if(s)s.value=T.sel}
+if(!S.tour&&!TR.on&&!TR.shown){TR.shown=1;setTimeout(tourStart,500)}}
+const VW={game:vGame,home:vHome,plan:vPlan,acts:vActs,subj:vSubj,prog:vProg,goals:vGoals,timer:vTimer,cal:vCal,rev:vRev,set:vSet,more:vMore};
+function go(v){V=v;render();scrollTo(0,0)}
+const SER=['1º ano','2º ano','3º ano','4º ano','5º ano','6º ano','7º ano','8º ano','9º ano','1º ano do Ensino Médio','2º ano do Ensino Médio','3º ano do Ensino Médio','Outro'],NS=['Aula','Reunião','Outros'];
+
+const setIn=v=>{IN=v;try{localStorage.setItem('estuda_in',v?'1':'0')}catch(e){}};
+const EM=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/,showE=er=>{$('#er').innerHTML=er.map(x=>'• '+esc(x)).join('<br>')};
+
+function land(){const b=[['calendar-check','Organizar os estudos','Monte uma rotina que cabe nos seus horários.'],['book-open','Acompanhar matérias','Veja o progresso de cada disciplina.'],['calendar-days','Controlar compromissos','Provas, trabalhos e entregas em um só lugar.'],['chart-column','Acompanhar seu progresso','Metas, pontos e sequência de estudos.'],['refresh-cw','Manter uma rotina','Se algo não der certo, o plano se reorganiza.']];
+return`<header class="top"><b class="logo">Estuda<span>+</span></b><nav><a href="#hero">Início</a><a href="#como">Como funciona</a><a href="#rec">Recursos</a><button class="ln" onclick="A='in';render()">Entrar</button></nav><button class="btn" onclick="A='in';render()">Começar agora</button></header>
+<section id="hero" class="hero"><div><h1>Organize seus estudos em um só lugar.</h1><p class="m">O Estuda+ monta um plano de estudos com suas matérias, provas e horários livres, e mostra o que fazer primeiro.</p><p><i>Sua rotina. Seu ritmo. Seu melhor estudo.</i></p><button class="btn" onclick="A='in';render()">Começar agora</button><a class="btn s" href="#como">Como funciona</a></div>
+<div class="mock" aria-hidden="true"><div class="mk">${ico('graduation-cap')}${ico('book-open')}${ico('pencil')}</div><b>Meu plano de estudos</b><div>17:00 — Matemática <span class="bd r">${ico('chevrons-up')}Muito alta</span></div><div>17:40 — ${ico('coffee')}Intervalo</div><div>17:50 — Português <span class="bd y">${ico('chevron-up')}Alta</span></div></div></section>
+<section id="rec" class="sec"><div class="grid">${b.map(x=>`<div class="card"><div class="fi">${ico(x[0])}</div><h3>${x[1]}</h3><p class="m">${x[2]}</p></div>`).join('')}</div></section>
+<section id="como" class="sec"><h2>Como funciona</h2><div class="grid"><div class="card"><b>1. Cadastre</b><p class="m">Matérias, compromissos e horários livres.</p></div><div class="card"><b>2. Receba seu plano</b><p class="m">O sistema analisa tudo e indica o que estudar primeiro.</p></div><div class="card"><b>3. Acompanhe</b><p class="m">Marque o que concluiu e veja seu progresso.</p></div></div><p class="m">Você não precisa decidir o que estudar: o Estuda+ explica cada recomendação.</p></section>`}
+/* --- contas na nuvem (Firebase) e sincronização --- */
+let BZ=0,PN='',ENT='',ST=null,SY='ok',FBU='';
+const FE={'auth/invalid-credential':'E-mail ou senha incorretos.','auth/wrong-password':'E-mail ou senha incorretos.','auth/user-not-found':'E-mail ou senha incorretos.','auth/invalid-email':'Digite um e-mail válido, como nome@email.com.','auth/email-already-in-use':'Este e-mail já tem conta. Toque em "Entrar".','auth/weak-password':'Senha fraca. Use pelo menos 6 caracteres, com letras e números.','auth/network-request-failed':'Sem conexão com a internet. Tente de novo.','auth/too-many-requests':'Muitas tentativas. Aguarde alguns minutos.','auth/operation-not-allowed':'O login por e-mail ainda não foi ativado no Firebase.'};
+const syTxt=()=>({ok:'Sincronizado',pend:'Salvando…',sav:'Salvando…',err:'Sem conexão: será enviado quando a internet voltar'}[SY]||'');
+const upd=()=>{const e=$('#sy');if(e)e.textContent=syTxt()};
+const okFB=()=>!!(window.FB&&FB.ok);
+function qsync(){SY='pend';upd();clearTimeout(ST);ST=setTimeout(push,1500)}
+async function push(){if(!UID||!S)return;if(!okFB()){SY='pend';return}
+const id=UID,t=S._t,b=JSON.stringify(S);SY='sav';upd();
+try{await FB.save(id,b,t);if(UID==id&&S&&S._t==t)SY='ok'}catch(e){SY='err';setTimeout(qsync,15000)}upd()}
+async function refresh(){if(!UID||!okFB()||SY!='ok'||TR.on)return;
+try{const cl=await FB.load(UID);if(cl&&SY=='ok'&&cl._t>(S._t||0)){S=cl;if(!S.wk)S.wk=[];try{localStorage.setItem('estuda_u_'+UID,JSON.stringify(S))}catch(e){}render()}}catch(e){}}
+addEventListener('visibilitychange',()=>{if(document.visibilityState=='hidden'){if(UID&&SY=='pend'){clearTimeout(ST);push()}}else refresh()});
+addEventListener('online',()=>{if(UID&&SY!='ok')qsync()});
+function authV(){const up=A=='up',f=(id,l,t,ac)=>`<label class="f">${l}<input id="${id}" type="${t}" autocomplete="${ac}" placeholder="${PH[id]||''}"></label>`;
+return`<header class="top"><b class="logo">Estuda<span>+</span></b><button class="btn o" onclick="A=0;render()">${ico('arrow-left')}Voltar</button></header><section class="sec"><div class="card" style="max-width:440px;margin:auto"><h2>${up?'Criar conta':'Entrar na conta'}</h2>${up?f('rn','Nome','text','name'):''}${f('re','E-mail','email','email')}${f('rp','Senha','password',up?'new-password':'current-password')}${up?f('rc','Confirmar senha','password','new-password')+'<small>Mínimo de 6 caracteres, com letras e números.</small>':''}<div class="er" id="er" role="alert"></div><button class="btn" id="ab" onclick="${up?'reg()':'login()'}">${up?'Criar conta':'Entrar'}</button>${up?'':'<button class="ln" onclick="forgot()">Esqueci minha senha</button>'}<p class="m">${up?'Já tem uma conta?':'Ainda não tem uma conta?'} <button class="ln" onclick="A='${up?'in':'up'}';render()">${up?'Entrar':'Criar conta'}</button></p><button class="btn s" onclick="demo();setIn(1);A=0;render()">Experimentar sem criar conta</button><small class="hn">Com conta, seu progresso fica salvo na nuvem e você entra em qualquer aparelho. O modo de teste guarda os dados só neste aparelho.</small></div></section>`}
+const setBz=(on,t)=>{BZ=on;const b=$('#ab');if(b){b.disabled=!!on;b.textContent=on?t:(A=='up'?'Criar conta':'Entrar')}};
+function fbOk(){if(okFB())return 1;showE(['Não foi possível conectar ao servidor. Verifique a internet e tente de novo. Se estiver na escola, a rede pode estar bloqueando o Google.']);return 0}
+async function reg(){if(BZ)return;const n=V0('#rn').trim(),e=V0('#re').trim().toLowerCase(),p=V0('#rp'),c=V0('#rc'),er=[];
+if(n.length<2)er.push('Informe seu nome.');if(!EM.test(e))er.push('Digite um e-mail válido, como nome@email.com.');
+if(p.length<6||!/[A-Za-z]/.test(p)||!/\d/.test(p))er.push('A senha precisa ter pelo menos 6 caracteres, com letras e números.');
+if(p!==c)er.push('As senhas não são iguais.');if(er.length)return showE(er);if(!fbOk())return;
+setBz(1,'Criando conta…');PN=n;try{const u=await FB.register(e,p,n);await enter(u)}catch(x){PN='';setBz(0);showE([FE[x&&x.code]||'Não foi possível criar a conta. ('+((x&&x.code)||'erro')+')'])}}
+async function login(){if(BZ)return;const e=V0('#re').trim().toLowerCase(),p=V0('#rp'),er=[];
+if(!EM.test(e))er.push('Digite um e-mail válido.');if(!p)er.push('Digite sua senha.');if(er.length)return showE(er);if(!fbOk())return;
+setBz(1,'Entrando…');try{const u=await FB.login(e,p);await enter(u)}catch(x){setBz(0);showE([FE[x&&x.code]||'Não foi possível entrar. ('+((x&&x.code)||'erro')+')'])}}
+async function forgot(){const e=V0('#re').trim().toLowerCase();if(!EM.test(e))return showE(['Digite seu e-mail acima para receber o link de nova senha.']);if(!fbOk())return;
+try{await FB.reset(e);$('#er').textContent='';toast('Se houver uma conta com esse e-mail, enviamos o link para criar uma nova senha.')}catch(x){showE([FE[x&&x.code]||'Não foi possível enviar o e-mail. ('+((x&&x.code)||'erro')+')'])}}
+async function enter(u){const uid=u.uid;if(ENT==uid)return;ENT=uid;
+let loc=null,cl=null,ok=1;try{loc=JSON.parse(localStorage.getItem('estuda_u_'+uid))}catch(e){}
+try{cl=await FB.load(uid)}catch(e){ok=0}
+FBU=u.email||'';const n=PN||u.displayName||FBU.split('@')[0]||'Estudante';PN='';
+let pick=cl&&loc?((loc._t||0)>(cl._t||0)?loc:cl):(cl||loc),nw=0;
+if(!pick){if(!ok){ENT='';setBz(0);const er=$('#er');if(er)showE(['Não foi possível carregar sua conta. Verifique a internet e tente de novo.']);else toast('Não foi possível carregar sua conta. Verifique a internet.');return}
+let lg=null;try{lg=JSON.parse(localStorage.getItem(K))}catch(e){}
+if(lg&&!lg.demo&&!localStorage.getItem('estuda_lg_done')&&((lg.acts||[]).length||(lg.wk||[]).length||(lg.log||[]).length)&&confirm('Encontramos dados de estudo salvos neste aparelho. Deseja importar para a sua conta?')){pick=lg;localStorage.setItem('estuda_lg_done','1')}
+else{pick=base({n,serie:''});nw=1}}
+const first=!IN;UID=uid;try{localStorage.setItem('estuda_cu',uid)}catch(e){}
+S=pick;if(!S.wk)S.wk=[];if(nw)gen();if(!S._t)S._t=Date.now();
+IN=true;A=0;if(first)V='home';setBz(0);
+try{localStorage.setItem('estuda_u_'+uid,JSON.stringify(S))}catch(e){}
+if(!cl||pick!==cl)qsync();else{SY='ok'}
+render();if(nw)toast('Conta criada! Bem-vindo(a) ao Estuda+')}
+function onFbAuth(u){if(!u){ENT='';if(UID){UID=null;S=null;IN=false;try{localStorage.removeItem('estuda_cu')}catch(e){}}render();return}
+if(SY=='pend'&&UID)setTimeout(push,500);enter(u)}
+async function outAcc(){if(!UID){setIn(0);A=0;render();return}
+const id=UID;clearTimeout(ST);let ok=1;
+if(SY!='ok'){try{await FB.save(id,JSON.stringify(S),S._t)}catch(e){ok=0}}
+if(ok)try{localStorage.removeItem('estuda_u_'+id)}catch(e){}
+try{await FB.logout()}catch(e){}
+UID=null;S=null;IN=false;ENT='';SY='ok';try{localStorage.removeItem('estuda_cu')}catch(e){}
+V='home';A=0;render();if(!ok)toast('Sem internet: as últimas alterações ficaram salvas neste aparelho.')}
+/* --- rotina semanal de compromissos --- */
+const WCAT=['Escola','Esporte','Curso','Trabalho','Atividade pessoal','Outro'],CC={Escola:'#2563EB',Esporte:'#16A34A',Curso:'#9333EA',Trabalho:'#D97706','Atividade pessoal':'#DB2777',Outro:'#64748B'},CI={Escola:'school',Esporte:'dumbbell',Curso:'graduation-cap',Trabalho:'briefcase','Atividade pessoal':'user',Outro:'shapes'},DS=['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'],OD=[1,2,3,4,5,6,0];
+let AT='wk',WE=null,WO=0;
+function wkOn(day){const d=wd(day).getDay();return(S.wk||[]).filter(w=>w.fix?w.days.includes(d):w.date==day).sort((a,b)=>a.s-b.s)}
+function busy(day){return wkOn(day).map(w=>[w.s-(w.trav||0),w.e+(w.trav||0)])}
+const wdw=w=>w.fix?w.days:[wd(w.date).getDay()];
+function clash(o){const a=wdw(o),x=S.wk.find(w=>w.id!=o.id&&w.s<o.e&&o.s<w.e&&wdw(w).some(d=>a.includes(d)));return x?x.t:''}
+function dtxt(ds){const p=OD.map((d,i)=>ds.includes(d)?i:-1).filter(i=>i>=0);if(p.length==7)return'Todos os dias';const r=[];let i=0;while(i<p.length){let j=i;while(j+1<p.length&&p[j+1]==p[j]+1)j++;r.push(j-i>=2?DS[OD[p[i]]]+' a '+DS[OD[p[j]]]:p.slice(i,j+1).map(k=>DS[OD[k]]).join(', '));i=j+1}return r.join(', ')}
+const wi=w=>`<span class="wi" style="background:${CC[w.cat]||CC.Outro}">${ico(CI[w.cat]||'shapes')}</span>`;
+function wGrid(){const t=today(),dow=wd(t).getDay(),mon=add(t,-((dow+6)%7)+WO*7),days=OD.map((_,i)=>add(mon,i)),all=days.map(d=>wkOn(d));
+let lo=6,hi=22;all.forEach(l=>l.forEach(w=>{lo=Math.min(lo,Math.floor(Math.max(0,w.s-(w.trav||0))/60));hi=Math.max(hi,Math.ceil(Math.min(1440,w.e+(w.trav||0))/60))}));
+const H=34,r=x=>(x-lo*60)/60*H,hgt=(hi-lo)*H;
+let g=`<div class="rw" style="justify-content:space-between"><button class="btn o sm" onclick="WO--;render()" aria-label="Semana anterior">${ico('chevron-left')}</button><b style="text-align:center">${ddm(mon)} a ${ddm(add(mon,6))}${WO?'':' <small>(esta semana)</small>'}</b><button class="btn o sm" onclick="WO++;render()" aria-label="Próxima semana">${ico('chevron-right')}</button></div>`;
+g+=`<div class="wk" style="--H:${H}px"><div class="wg"><div class="wh"></div><div class="wb" style="height:${hgt}px">${Array.from({length:hi-lo},(_,i)=>`<i style="top:${i*H}px">${lo+i}h</i>`).join('')}</div></div>`;
+days.forEach((d,i)=>{const L=[],ls=[];all[i].forEach(w=>{let k=0;while(ls[k]!=null&&ls[k]>w.s)k++;ls[k]=w.e;L.push([w,k])});const n=ls.length||1;
+g+=`<div><div class="wh">${DS[OD[i]]}<b style="${d==t?'background:var(--b);color:#fff':''}">${wd(d).getDate()}</b></div><div class="wb" style="height:${hgt}px">${L.map(([w,k])=>{const c=CC[w.cat]||CC.Outro,tr=w.trav||0,a=Math.max(0,w.s-tr),z=Math.min(1440,w.e+tr),pos=`left:${k/n*100}%;width:${100/n}%`;
+return(tr?`<div class="tv" style="--tc:${c};top:${r(a)}px;height:${r(w.s)-r(a)}px;${pos}"></div><div class="tv" style="--tc:${c};top:${r(w.e)}px;height:${r(z)-r(w.e)}px;${pos}"></div>`:'')+`<button class="we" style="background:${c};top:${r(w.s)}px;height:${Math.max(16,r(w.e)-r(w.s))}px;${pos}" onclick="editW(${w.id})" aria-label="${esc(w.t)}, ${hm(w.s)} às ${hm(w.e)}. Editar"><span>${esc(w.t)}</span><small>${hm(w.s)}</small></button>`}).join('')}</div></div>`});
+return g+'</div>'}
+function wTog(){const f=V0('#wf')=='1';$('#wdd').hidden=!f;$('#wdt').hidden=f}
+function wQ(k){const g={u:[1,2,3,4,5],e:[6,0],t:[0,1,2,3,4,5,6],n:[]}[k];document.querySelectorAll('.dy input').forEach(i=>i.checked=g.includes(+i.value))}
+function editW(id){AT='wk';WE=id;render();scrollTo(0,0)}
+function delW(id){if(!confirm('Excluir este compromisso?'))return;S.wk=S.wk.filter(x=>x.id!=id);if(WE==id)WE=null;gen(1);save();render();toast('Compromisso excluído e plano atualizado')}
+function saveW(){const t=V0('#wn').trim(),fix=V0('#wf')=='1',days=[...document.querySelectorAll('.dy input:checked')].map(i=>+i.value),date=V0('#wdate'),s=V0('#ws'),e=V0('#we'),er=[];
+if(t.length<2)er.push('Informe o nome do compromisso.');
+if(fix&&!days.length)er.push('Escolha pelo menos um dia da semana.');
+if(!fix&&!date)er.push('Informe a data do compromisso ocasional.');
+if(!s||!e)er.push('Informe o horário de início e de término.');else if(tm(e)<=tm(s))er.push('O término precisa ser depois do início.');
+if(er.length)return showE(er);
+const o={t,cat:V0('#wc'),fix:fix?1:0,days:fix?days:[],date:fix?'':date,s:tm(s),e:tm(e),trav:Math.max(0,Math.min(240,+V0('#wt')||0)),obs:V0('#wo').trim()};
+let it,msg;if(WE!=null){it=S.wk.find(x=>x.id==WE);Object.assign(it,o);msg='Compromisso atualizado'}else{it=o;o.id=S.nid++;S.wk.push(o);msg='Compromisso adicionado'}
+const c=clash(it);WE=null;WN=0;gen(1);save();render();toast(msg+(c?'. Atenção: coincide com "'+c+'"':' e plano de estudos atualizado'))}
+/* --- avaliação do site --- */
+const RK='estuda_rev',AK='estuda_adm',EASE=['Muito fácil','Fácil','Normal','Difícil','Muito difícil'];let RS=0,RD=0,ADM=0;
+const gr=()=>{try{return JSON.parse(localStorage.getItem(RK))||[]}catch(e){return[]}};
+const sr=a=>{try{localStorage.setItem(RK,JSON.stringify(a));return 1}catch(e){return 0}};
+const stars=()=>[1,2,3,4,5].map(n=>`<button type="button" class="st ${n<=RS?'on':''}" onclick="setSt(${n})" aria-label="${n} estrela${n>1?'s':''}" aria-pressed="${n==RS}">${ico('star',n<=RS?'f':'')}</button>`).join('');
+function setSt(n){RS=n;$('#stw').innerHTML=stars();rIc()}
+function vRev(){const h='<h1>Avalie o Estuda+</h1>';
+if(RD)return h+`<div class="card"><h3>Obrigado pela sua avaliação!</h3><p>Recebemos a sua opinião. Ela ajuda a melhorar o Estuda+.</p><button class="btn s" onclick="RD=0;RS=0;render()">Enviar outra avaliação</button></div>`+adm();
+return h+`<p class="m">Conte como foi sua experiência. Leva menos de um minuto.</p><div class="card"><label class="f">Sua nota</label><div id="stw" role="group" aria-label="Nota de 1 a 5 estrelas">${stars()}</div>
+<label class="f" style="margin-top:10px">Como você achou a facilidade de usar o site?<select id="rvE"><option value="">Selecione</option>${EASE.map(x=>`<option>${x}</option>`).join('')}</select></label>
+<label class="f">Comentário (opcional)<textarea id="rvC" rows="3" maxlength="500"></textarea></label>
+<label class="f">Sugestão de melhoria (opcional)<textarea id="rvM" rows="3" maxlength="500"></textarea></label>
+<div class="er" id="er" role="alert"></div><button class="btn" onclick="sendRev()">Enviar avaliação</button><small>Sua avaliação é anônima: não guardamos nome nem e-mail.</small></div>`+adm()}
+function sendRev(){const e=V0('#rvE'),er=[];if(!RS)er.push('Escolha de 1 a 5 estrelas.');if(!e)er.push('Informe a facilidade de utilização.');
+if(er.length){$('#er').innerHTML=er.map(x=>'• '+esc(x)).join('<br>');return}
+const a=gr();a.push({id:Date.now(),d:new Date().toISOString(),s:RS,e,c:V0('#rvC').trim(),m:V0('#rvM').trim()});
+if(!sr(a)){$('#er').textContent='Não foi possível salvar neste navegador. Verifique se o armazenamento está liberado.';return}
+RD=1;render();toast('Avaliação enviada. Obrigado!')}
+function adm(){
+if(!ADM)return`<details class="card"><summary>${ico('lock')}Área administrativa</summary><p class="m">Acesso restrito a quem administra o site.</p><label class="f">Senha de administrador<input id="ap" type="password" autocomplete="current-password"></label><div class="er" id="er2" role="alert"></div><button class="btn" onclick="admIn()">Entrar</button></details>`;
+const r=gr().sort((a,b)=>b.id-a.id),avg=r.length?(r.reduce((q,x)=>q+x.s,0)/r.length).toFixed(1).replace('.',','):'—';
+return`<details class="card" open><summary>${ico('lock')}Avaliações recebidas</summary><div class="grid" style="margin:12px 0"><div class="card"><span class="m">Total</span><div class="big">${r.length}</div></div><div class="card"><span class="m">Média</span><div class="big">${avg} ${ico('star','f')}</div></div></div>
+${r.map(x=>`<div class="it"><div class="g"><b class="sv">${[1,2,3,4,5].map(i=>ico('star',i<=x.s?'f':'')).join('')}</b><small>${new Date(x.d).toLocaleString('pt-BR')} · Facilidade: ${esc(x.e)}</small>${x.c?`<small>${ico('message-square')}${esc(x.c)}</small>`:''}${x.m?`<small>${ico('lightbulb')}${esc(x.m)}</small>`:''}</div><button class="ln" onclick="delR(${x.id})">Excluir</button></div>`).join('')||'<p class="m">Nenhuma avaliação recebida ainda.</p>'}
+<button class="btn s" onclick="csvR()">Baixar CSV</button><button class="btn o" onclick="ADM=0;render()">Sair da área administrativa</button></details>`}
+function admIn(){const p=V0('#ap'),e=$('#er2');
+if(p!=='100213'){e.textContent='Senha incorreta.';return}
+ADM=1;render()}
+function delR(id){if(!confirm('Excluir esta avaliação?'))return;sr(gr().filter(x=>x.id!=id));render()}
+function csvR(){const q=v=>'"'+String(v==null?'':v).replace(/"/g,'""')+'"',r=gr();
+const t='\ufeffdata,nota,facilidade,comentario,sugestao\n'+r.map(x=>[x.d,x.s,x.e,x.c,x.m].map(q).join(',')).join('\n');
+const u=URL.createObjectURL(new Blob([t],{type:'text/csv;charset=utf-8'})),a=document.createElement('a');a.href=u;a.download='avaliacoes-estuda.csv';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}
+render();
+</script>
+<script type="module">
+import{initializeApp}from"https://www.gstatic.com/firebasejs/13.3.0/firebase-app.js";
+import{getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut,onAuthStateChanged,sendPasswordResetEmail,updateProfile}from"https://www.gstatic.com/firebasejs/13.3.0/firebase-auth.js";
+import{getFirestore,doc,getDoc,setDoc}from"https://www.gstatic.com/firebasejs/13.3.0/firebase-firestore.js";
+const app=initializeApp({apiKey:"AIzaSyD0CpQ4HgKorjw2xf99_DP1Ie1CFf0o-xs",authDomain:"estuda-82a91.firebaseapp.com",projectId:"estuda-82a91",storageBucket:"estuda-82a91.firebasestorage.app",messagingSenderId:"285513727452",appId:"1:285513727452:web:2fda91e3336194a18ce319"});
+const auth=getAuth(app),db=getFirestore(app);
+/* Dados de cada estudante: documento users/{uid} com o estado do app em texto (JSON) */
+window.FB={ok:1,
+register:async(e,p,n)=>{const c=await createUserWithEmailAndPassword(auth,e,p);try{await updateProfile(c.user,{displayName:n})}catch(_){}return c.user},
+login:async(e,p)=>(await signInWithEmailAndPassword(auth,e,p)).user,
+logout:()=>signOut(auth),
+reset:e=>sendPasswordResetEmail(auth,e),
+load:async uid=>{const r=await getDoc(doc(db,"users",uid));return r.exists()?JSON.parse(r.data().s):null},
+save:(uid,s,t)=>setDoc(doc(db,"users",uid),{s,t})};
+onAuthStateChanged(auth,u=>{if(window.onFbAuth)window.onFbAuth(u)});
+</script>
+</body></html>
